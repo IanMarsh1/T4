@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<!--    My MYSQL Reference Page
-    10/8/2021 Original Program
+<!--    ArcticFox Home Page
+    09/21/2021 Original Program
     -->
 <html lang="en">
 
-<!-- Head -->
+
 <head>
-    <title>My MYSQL Reference Page</title>
+    <title>ArcticFox SQL Reference Page</title>
     <meta charset="UTF-8">
 
     <!-- CSS -->
-    <style> 
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h2 {
+            color: #dfe7d3;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:visited {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+
+        a:active {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 18px;
+        }
         table {
             background-color: rgb(11, 80, 11);
             color: black;
@@ -39,36 +77,34 @@
             color: red;
         }
         tr:nth-child(even) {background-color: silver;} 
-    </style>
+    </style><!-- https://www.w3schools.com/html/html_links_colors.asp-->
+    <!-- I went online to find out how to change the way links look -->
 </head>
 
-<body style="background-color:#1d3397;">
+<body style="background-color:#00a84c;">
 
-    <!--  -->
     <header style="background-color:#dfe7d3;">
-        <a href= "file:///C:/SD2/AF/AF_HomePage.html" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
-    </header>
-    <header>
-        <h1 style="color:rgb(4, 179, 33);"> My MYSQL Reference Page </h1>
+        <a href= "file:///C:\SD2\T4\Team4.html" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
     </header>
 
-    <hr>
+    <nav style="background-color:#036933;"> <!-- Nav bar with links to the other pages of the website -->
+        <ul style="color:#dfe7d3;">
+            <li><a href="">Snowboards for Sale</a></li>
+            <li><a href="">Snowboards for Rent</a></li>
+            <li><a href="">Snowboard Equipment</a></li>
+            <li><a href="">Find a Location</a></li>
+            <li><a href="">Employee Login</a></li>
+            <li><a href="file:///C:/SD2/T4/AF_AdminPage.html">Admin Page</a></li>
 
-    <!-- Links at the top of page under the My MYSQL Reference Page -->
-    <nav style="background-color:#4f5153;">
-        <ul>
-            <li><a href="https://www.w3schools.com/sql/default.asp">W3Schools SQL</a></li>
-            <li><a href="https://www.w3schools.com/sql/sql_examples.asp">SQL Examples</a></li>
-            <li><a href="https://www.w3schools.com/sql/sql_injection.asp">SQL Injection</a></li>
+            <li><div class="topnav" text-align: center;>
+                <input type="text" placeholder="Search..">
+              </div></li>
         </ul>
     </nav>
-
-    <hr>
-    <main>
-
-    <!-- ----------------------------------------------------------------------------------------- -->
-
+    
+    <main> <!-- Info on the wibsite -->
         <h2 style="text-align: center;">DATABASE COMMANDS</h2>
+        <hr style="color:#053386;">
         
         <!-- Start of DATABASE COMMANDS -->
         <table border=1>
@@ -108,6 +144,7 @@
         <!-- ----------------------------------------------------------------------------------------- -->
 
         <h2 style="text-align: center;">TABLE COLUMN COMMANDS</h2>
+        <hr style="color:#053386;">
         
         <!-- Start of TABLE COLUMN COMMANDS -->
         <table border=1>
@@ -147,6 +184,7 @@
         <!-- ----------------------------------------------------------------------------------------- -->
 
         <h2 style="text-align: center;">TABLE DATA COMMANDS</h2>
+        <hr style="color:#053386;">
         
         <!-- Start of TABLE DATA COMMANDS -->
         <table border=1>
@@ -199,18 +237,30 @@
             
 
         </table>
+        <h2 style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;Links</h2>
+        <hr style="color:#053386;">
 
-        <br> <!-- Brake -->
+        <ul style="background-color:#dfe7d3;">
+            <li style="text-align: center;"><a href="https://www.w3schools.com/sql/default.asp">W3Schools SQL</a></li>
+            <li style="text-align: center;"><a href="https://www.w3schools.com/sql/sql_examples.asp">SQL Examples</a></li>
+            <li style="text-align: center;"><a href="https://www.w3schools.com/sql/sql_injection.asp">SQL Injection</a></li>
+        </ul>
+        <hr style="color:#053386;">
+        <br>
+        <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
+        <br> <!--img = cool-->
 
     </main>
 
-    <footer style="background-color:#4f5153;">
-        <hr>
-        <p style="text-align:center">
-        <small> This page © by I. Marsh, 10/8/2021 </small>
-        <br> Email <a herf=<a href="mailto:Ian.Marsh1@marist.edu">Ian</a> <!-- add email -->
-        </p>
-        <br>
+    <footer style="background-color:#036933;"><!-- Footer with links to important locations --> 
+        
+        Need Help? Send us an Email! <a herf=<a href="mailto:Ian.Marsh1@marist.edu, Luke.Pecovic1@marist.edu, antonio.lopez2@marist.edu">ArcticFox Support Team</a>
+        <br><a href="file:///C:/SD2/T4/AF_DisclaimerPage.html">Disclaimer Link</a>
+        <br><a href="">Privacy Statement Link</a>
+        <br><a href="">Rental/ Return Policy Link</a>
+        <br><a href="file:///C:/SD2/T4/AF_ChangeLog.html">Change Log Link</a>
+        <br><small> Current Version 1.0.0 </small>
+        <br><small> This page © by ArcticFox, 2021 </small>
     </footer>
 
 </body>
