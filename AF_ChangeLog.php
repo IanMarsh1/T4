@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--    AF_ChangeLog.html  
+<!--    AF_ChangeLog.php  
     10/11/21  Original Program
     -->
 <html lang="en">
@@ -63,7 +63,7 @@
 <body style="background-color:#00a84c;">
 
     <header style="background-color:#dfe7d3;">
-        <a href= "file:///C:\SD2\T4\Team4.html" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header  -->
+        <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header  -->
     </header>
 
     
@@ -72,12 +72,12 @@
 
     <nav style="background-color:#036933;"> <!-- Nav bar with links to the other pages of the website -->
         <ul style="color:#dfe7d3;">
-            <li><a href="file:///C:/SD2/T4/AF_Construction.html">Snowboards for Sale</a></li>
-            <li><a href="file:///C:/SD2/T4/AF_Construction.html">Snowboards for Rent</a></li>
-            <li><a href="file:///C:/SD2/T4/AF_Construction.html">Snowboard Equipment</a></li>
-            <li><a href="file:///C:/SD2/T4/AF_Construction.html">Find a Location</a></li>
-            <li><a href="file:///C:/SD2/T4/AF_Construction.html">Employee Login</a></li>
-            <li><a href="file:///C:/SD2/T4/AF_AdminPage.html">Admin Page</a></li>
+            <li><a href="AF_Construction.php">Snowboards for Sale</a></li>
+            <li><a href="AF_Construction.php">Snowboards for Rent</a></li>
+            <li><a href="AF_Construction.php">Snowboard Equipment</a></li>
+            <li><a href="AF_Construction.php">Find a Location</a></li>
+            <li><a href="AF_Construction.php">Employee Login</a></li>
+            <li><a href="AF_AdminPage.php">Admin Page</a></li>
 
             <li><div class="topnav" text-align: center;>
                 <input type="text" placeholder="Search..">
@@ -115,10 +115,10 @@
 
     <footer style="background-color:#036933;"><!-- Footer with links to important locations --> 
         Need Help? Send us an Email! <a herf=<a href="mailto:Ian.Marsh1@marist.edu, Luke.Pecovic1@marist.edu, antonio.lopez2@marist.edu">ArcticFox Support Team</a>
-        <br><a href="file:///C:/SD2/T4/AF_DisclaimerPage.html">Disclaimer Link</a>
-        <br><a href="file:///C:/SD2/T4/AF_Construction.html">Privacy Statement Link</a>
-        <br><a href="file:///C:/SD2/T4/AF_Construction.html">Rental/ Return Policy Link</a>
-        <br><a href="file:///C:/SD2/T4/AF_ChangeLog.html">Change Log Link</a>
+        <br><a href="AF_DisclaimerPage.php">Disclaimer Link</a>
+        <br><a href="AF_Construction.php">Privacy Statement Link</a>
+        <br><a href="AF_Construction.php">Rental/ Return Policy Link</a>
+        <br><a href="AF_ChangeLog.php">Change Log Link</a>
         <br><small> Current Version 1.0.0 </small>
         <br><small> This page © by ArcticFox, 2021 </small>
     </footer>
