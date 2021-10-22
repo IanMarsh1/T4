@@ -80,16 +80,9 @@
         <br> <!--img = cool-->
     </main>
 
-    <footer style="background-color:#036933;"><!-- Footer with links to important locations --> 
-        
-        Need Help? Send us an Email! <a herf=<a href="mailto:Ian.Marsh1@marist.edu, Luke.Pecovic1@marist.edu, antonio.lopez2@marist.edu">ArcticFox Support Team</a>
-        <br><a href="AF_DisclaimerPage.php">Disclaimer Link</a>
-        <br><a href="AF_Construction.php">Privacy Statement Link</a>
-        <br><a href="AF_Construction.php">Rental/ Return Policy Link</a>
-        <br><a href="AF_ChangeLog.php">Change Log Link</a>
-        <br><small> Current Version 1.0.0 </small>
-        <br><small> This page © by ArcticFox, 2021 </small>
-    </footer>
+    <?php
+    INCLUDE ("../T4/AF_Footer.php");
+    ?>
 
 </body>
 

@@ -1,7 +1,7 @@
 <!- 2021/10/18 IM Original Program->
 
 <!DOCTYPE html>
-<html lang="en"><!-- NERDS = BILL NYE -->
+<html lang="en">
 
 
 <head>
@@ -10,8 +10,6 @@
 <head>
 
 <body>
-
-<!-- Buenos Dias bonure -->
 
 <?php
     echo "<h1> Ian Marsh is Testing Connection</h1>";

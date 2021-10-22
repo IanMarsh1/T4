@@ -102,8 +102,23 @@
         <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
         <br> <!--img = cool-->
     </main>
+    <?php
+    INCLUDE ("../T4/AF_Footer.php");
+    ?>
+    
+    
 
-    <footer style="background-color:#036933;"><!-- Footer with links to important locations --> 
+    
+
+</body>
+
+</html>
+
+
+<!--<footer style="background-color:#036933;"> Footer with links to important locations 
+    
+
+
         
         Need Help? Send us an Email! <a herf=<a href="mailto:Ian.Marsh1@marist.edu, Luke.Pecovic1@marist.edu, antonio.lopez2@marist.edu">ArcticFox Support Team</a>
         <br><a href="AF_DisclaimerPage.php">Disclaimer Link</a>
@@ -112,8 +127,4 @@
         <br><a href="AF_ChangeLog.php">Change Log Link</a>
         <br><small> Current Version 1.0.0 </small>
         <br><small> This page © by ArcticFox, 2021 </small>
-    </footer>
-
-</body>
-
-</html>
+    </footer> -->
