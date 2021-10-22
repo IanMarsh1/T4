@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--    ArcticFox Home Page
+<!--    ArcticFox
     09/21/2021 Original Program
     -->
 <html lang="en">
