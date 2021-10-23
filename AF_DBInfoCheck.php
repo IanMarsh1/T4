@@ -12,6 +12,7 @@
 <body>
 
 <?php
+    define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
     echo "<h1> Ian Marsh is Testing Connection</h1>";
     echo "<ol>";
     echo "<li> Calling 'connect_db.php' to connect to the database!</l1>";

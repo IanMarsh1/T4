@@ -145,6 +145,7 @@
     </main>
 
     <?php
+    define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
     INCLUDE ("../T4/AF_Footer.php");
     ?>
 
