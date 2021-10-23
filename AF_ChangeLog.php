@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--    AF_ChangeLog.php  
-    10/11/21  Original Program
-    -->
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_ChangeLog.PHP  (Original Program)
+--  ArcticFox Change Log Page
+--  LastUpDate: 10/22/21
+--  Show change logs
+------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 
@@ -114,7 +117,7 @@
     </main>
 
     <?php
-    define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
+    define("FILE_AUTHOR"," Antonio Lopez, Luke Pecovic, and Ian Marsh");
     INCLUDE ("../T4/AF_Footer.php");
     ?>
 

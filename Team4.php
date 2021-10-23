@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--    ArcticFox Home Page
-    09/21/2021 Original Program
-    -->
+<!-----------------------------------------------------------------------------------------------------------------
+--  Team4.PHP (Original Program)
+--  ArcticFox Home Page
+--  LastUpDate: 10/22/21
+--  This will be our home page that will link to everything on the site
+------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 

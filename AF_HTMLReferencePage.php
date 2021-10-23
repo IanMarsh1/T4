@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--    ArcticFox Reference Page
-    09/21/2021 Original Program
-    -->
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_HTMLReferencePage.PHP (Original Program)
+--  ArcticFox Reference Page
+--  LastUpDate: 10/22/21
+--  This will be our page for references
+------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 

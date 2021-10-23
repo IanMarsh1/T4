@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--    ArcticFox 
-    09/21/2021 Original Program
-    -->
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_DisclaimerPage.PHP (Original Program)
+--  ArcticFox Disclaimer Page
+--  LastUpDate: 10/22/21
+--  This will show all of AF disclaimers
+------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 

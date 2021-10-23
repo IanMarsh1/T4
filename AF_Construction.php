@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--    ArcticFox
-    09/21/2021 Original Program
-    -->
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_Construction.PHP (Original Program)
+--  ArcticFox Construction Page
+--  LastUpDate: 10/22/21
+--  This will show when a link is not yet working
+------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 

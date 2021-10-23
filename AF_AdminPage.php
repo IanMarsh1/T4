@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--    AF_AdminPage.php 
-    10/11/21 Original Program
-    -->
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_AdminPage.php (Original Program)
+--  ArcticFox Admin Page
+--  LastUpDate: 10/22/21
+--  This will be used by admins and give them the links they need
+------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 

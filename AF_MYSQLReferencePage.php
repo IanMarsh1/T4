@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--    ArcticFox Home Page
-    09/21/2021 Original Program
-    -->
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_MYSQLReferencePage.PHP (Original Program)
+--  ArcticFox MYSQL Reference Page
+--  LastUpDate: 10/22/21
+--  Shows SQL commands
+------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 

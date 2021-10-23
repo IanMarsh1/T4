@@ -1,3 +1,11 @@
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_Footer.PHP (Original Program)
+--  ArcticFox Footer
+--  LastUpDate: 10/22/21
+--  This will be the footer on all AF pages
+------------------------------------------------------------------------------------------------------------------>
+
+
 <?php
 define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
 echo "<footer style='background-color:#036933;'>";  
