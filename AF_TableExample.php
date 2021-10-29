@@ -77,39 +77,61 @@
         </ul>
     </nav>
     
-    <main> <!-- Info on the wibsite -->
-        <hr style="color:#053386;">
-        <h2>Who are we?</h2>
-        <p style="text-align: center;font-size: 20px;">ArcticFox is a retail company specializing in snowboarding equipment and clothing, which
-        includes but is not limited to different brands of snowboards, jackets, pants, snow boots, and 
-        goggles.</p>
+    
+    <main> 
+        
+    <?php
+    REQUIRE ("../Connect_db.php"); //You need a ../ becuase this file is in the parent folder
 
-        <hr style="color:#053386;">
+    $q = "SELECT * FROM T4_Users"; # We put command in $q   -  in the example we have t4_Users
+    $r = mysqli_query ( $dbc , $q );       # this runs commands,
 
-        <h2>What services do we offer?</h2>
-        <p style="text-align: center;font-size: 20px;">ArcticFox offer a rental service for those that want to go out for a day or two of 
-            fun. Customers can either rent/purchase their desired product inside one of our locations or 
-            through the website, and they can schedule when they would like to come to pick 
-            up their snow gear there. If a customer ever has a problem with our products/ services, they can 
-            contact our customer service line.</p>
+    echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
-        <hr style="color:#053386;">
+    echo "<tr>"; //This is the table header
+        echo "<th>userID</th>";
+        echo "<th>username</th>";
+        echo "<th>password</th>";
+        echo "<th>password_hash</th>";
+        echo "<th>lastPassChange</th>";
+        echo "<th>acctType</th>";
+        echo "<th>active</th>";
+        echo "<th>DOB</th>";
+        echo "<th>address</th>";
+        echo "<th>phone_number</th>";
 
-        <h2>What can the Web Site do for you?</h2>
-        <p style="text-align: center;font-size: 20px;">On ArcticFox.com, you will be able to rent or buy all your snowboarding needs. The site is a one-stop 
-            shop to help complement our already successful in-store business. The site will also help our employees make 
-            your experience better by offering real-time quantity numbers and much more.
-        </p>
-        <hr style="color:#053386;">
-        <br>
-        <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
-        <br> <!--img = cool-->
+    if ($r) {
+        while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
+            echo "<tr>"; //This is where you echo all the data
+                echo "<td> " . $row[0] ."</td>";
+                echo "<td> " . $row[1] ."</td>";
+                echo "<td> " . $row[2] ."</td>";
+                echo "<td> " . $row[3] ."</td>";
+                echo "<td> " . $row[4] ."</td>";
+                echo "<td> " . $row[5] ."</td>";
+                echo "<td> " . $row[6] ."</td>";
+                echo "<td> " . $row[7] ."</td>";
+                echo "<td> " . $row[8] ."</td>";
+                echo "<td> " . $row[9] ."</td>";
+            echo "</tr>"; 
+        }
+    }
+    else { 
+        echo "<li>" . mysqli_error( $dbc ) . "</li>" ;
+    }
+    echo "</tr>";
+    echo "</Table>";
+    
+    ?>
+    <br>
+    
     </main>
+
+    <!--- This is the footer file --->
     <?php
     define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
     INCLUDE ("../T4/AF_Footer.php");
     ?>
-    
     
 
     
@@ -117,4 +139,3 @@
 </body>
 
 </html>
-
