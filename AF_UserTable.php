@@ -9,7 +9,7 @@
 
 
 <head>
-    <title>ArcticFox Home Page</title>
+    <title>ArcticFox User Table</title>
     <meta charset="UTF-8">
 
     <!-- CSS -->
@@ -23,6 +23,38 @@
             color: #dfe7d3;
             text-align: center;
             font-size: 30px;
+        }
+        table {
+            background-color: rgb(11, 80, 11);
+            color: black;
+            border-collapse: collapse;
+            border: 1px;
+            font-family: Arial;
+            font-weight: normal;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+
+        th {
+            background-color: gray;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        tr:nth-child(even) {background-color: silver;} 
+
+        h3 {
+            color: black;
+            text-align: center;
+            font-size: 25px;
+            background-color:#df5b52;
         }
 
         a:link {
@@ -80,6 +112,9 @@
     
     <main> 
         
+        <h3>ADMIN PAGE <br>User Table</h3>
+        <hr>
+        
     <?php
     REQUIRE ("../Connect_db.php"); //You need a ../ becuase this file is in the parent folder
 
@@ -112,6 +147,9 @@
     
     ?>
     <br>
+
+    <hr>
+    <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
     
     </main>
 

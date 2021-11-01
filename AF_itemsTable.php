@@ -9,7 +9,7 @@
 
 
 <head>
-    <title>ArcticFox Home Page</title>
+    <title>ArcticFox Items Table</title>
     <meta charset="UTF-8">
 
     <!-- CSS -->
@@ -53,6 +53,39 @@
             text-decoration: underline;
             font-size: 18px;
         }
+
+        table {
+            background-color: rgb(11, 80, 11);
+            color: black;
+            border-collapse: collapse;
+            border: 1px;
+            font-family: Arial;
+            font-weight: normal;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+
+        th {
+            background-color: gray;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+        tr:nth-child(even) {background-color: silver;} 
+
+        h3 {
+            color: black;
+            text-align: center;
+            font-size: 25px;
+            background-color:#df5b52;
+        }
     </style><!-- https://www.w3schools.com/html/html_links_colors.asp-->
     <!-- I went online to find out how to change the way links look -->
 </head>
@@ -85,8 +118,10 @@
 
 
     <main>
+    <h3>ADMIN PAGE <br>Items Table</h3>
+    <hr>
 
-        <?php
+    <?php
     REQUIRE ("../Connect_db.php"); //You need a ../ becuase this file is in the parent folder
 
     $q = "SELECT * FROM T4_Items"; # We put command in $q   -  Dislays all records of items table
@@ -95,15 +130,12 @@
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
     echo "<tr>"; //This is the table header
-    echo "<th>itemID</th>";
-    echo "<th>itemName</th>";
-    echo "<th>itemPrice</th>";
-    echo "<th>modelNum</th>";
-    echo "<th>quantityAvailable</th>";
-    echo "<th>itemWeight</th>";
-    echo "<th>itemDimensions</th>";
-    echo "<th>description</th>";
-    echo "<th>itemCategory</th>";
+    echo "<th>Item ID</th>";
+    echo "<th>Name</th>";
+    echo "<th>Price</th>";
+    echo "<th>Model Number</th>";
+    echo "<th>Quantity Available</th>";
+    echo "<th>Category</th>";
         
 
     if ($r) {
@@ -114,9 +146,7 @@
             echo "<td> " . $row[2] ."</td>";
             echo "<td> " . $row[3] ."</td>";
             echo "<td> " . $row[4] ."</td>";
-            echo "<td> " . $row[5] ."</td>";
-            echo "<td> " . $row[6] ."</td>";
-            echo "<td> " . $row[7] ."</td>";
+            
             echo "<td> " . $row[8] ."</td>";
                 
             echo "</tr>"; 
@@ -129,7 +159,10 @@
     echo "</Table>";
     
     ?>
-        <br>
+    <br>
+
+    <hr>
+    <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
 
     </main>
 

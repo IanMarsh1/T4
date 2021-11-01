@@ -94,6 +94,21 @@
         <h2 style="color:#dfe7d3;text-align: center;"> Change Log </h2>
 
         <hr style="color:#053386;"> 
+        
+
+        <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.1.0 - 11/2/2021 -  First Update</strong></h3>
+
+        
+
+        <ul style="font-size: 18px;">
+            
+            <li>Created Pages that display users/products/suppliers tables</li>
+            <li>Added FILE_AUTHOR</li>
+            <li>Migrated to PHP</li>
+            
+        
+        </ul>
+        <br>
 
         <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.0.0 - 10/12/2021 -  Original web pages released</strong></h3>
 

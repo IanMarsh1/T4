@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  AF_AdminPage.php (Original Program)
---  ArcticFox Admin Page
---  LastUpDate: 10/22/21
---  This will be used by admins and give them the links they need
+--  AF_UserTable.PHP (Original Program)
+--  ArcticFox Home Page
+--  LastUpDate: 11/1/21
+--  This will show our Suppliers table 
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
 
 <head>
-    <title>ArcticFox Admin Page</title>
+    <title>ArcticFox Suppliers Table</title>
     <meta charset="UTF-8">
 
     <!-- CSS -->
@@ -24,6 +24,32 @@
             text-align: center;
             font-size: 30px;
         }
+        table {
+            background-color: rgb(11, 80, 11);
+            color: black;
+            border-collapse: collapse;
+            border: 1px;
+            font-family: Arial;
+            font-weight: normal;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+
+        th {
+            background-color: gray;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        tr:nth-child(even) {background-color: silver;} 
+
         h3 {
             color: black;
             text-align: center;
@@ -65,7 +91,7 @@
 <body style="background-color:#00a84c;">
 
     <header style="background-color:#dfe7d3;">
-        <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header  -->
+        <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
     </header>
 
     <nav style="background-color:#036933;"> <!-- Nav bar with links to the other pages of the website -->
@@ -82,28 +108,58 @@
               </div></li>
         </ul>
     </nav>
+    
+    
+    <main> 
+        
+        <h3>ADMIN PAGE <br>Suppliers Table</h3>
+        <hr>
+        
+    <?php
+    REQUIRE ("../Connect_db.php"); //You need a ../ becuase this file is in the parent folder
 
-    <main> <!-- Info on the wibsite -->
-        <h3>ADMIN PAGE</h3>
-        <hr style="color:#053386;">
-        <ul style="color:#dfe7d3;">
-            <li><a href="AF_HTMLReferencePage.php">HTML/CSS Reference</a></li>
-            <li><a href="AF_MYSQLReferencePage.php">MySQL Reference</a></li>
-            <li><a href="AF_UserTable.php">Show User Table </a></li>
-            <li><a href="AF_ItemsTable.php">Show Items Table</a></li>
-            <li><a href="AF_SuppliersTable.php">Show Suppliers Table </a></li>
-            <li><a href="AF_Doc.pdf">Requirements and Design Document </a></li>
-        </ul>
-        <hr style="color:#053386;">
-        <br>
-        <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
-        <br> <!--img = cool-->
+    $q = "SELECT * FROM T4_Suppliers"; # We put command in $q   -  in the example we have t4_Users
+    $r = mysqli_query ( $dbc , $q );       # this runs commands,
+
+    echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
+
+    echo "<tr>"; //This is the table header
+    echo "<th>Supplier ID</th>";
+    echo "<th>Supplier Name</th>";
+    echo "<th>Email</th>";
+
+    if ($r) {
+        while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
+            echo "<tr>"; //This is where you echo all the data
+            echo "<td> " . $row[0] ."</td>";
+            echo "<td> " . $row[1] ."</td>";
+            echo "<td> " . $row[2] ."</td>";
+                
+            echo "</tr>"; 
+        }
+    }
+    else { 
+        echo "<li>" . mysqli_error( $dbc ) . "</li>" ;
+    }
+    echo "</tr>";
+    echo "</Table>";
+    
+    ?>
+    <br>
+
+    <hr>
+    <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
+    
     </main>
 
+    <!--- This is the footer file --->
     <?php
     define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
     INCLUDE ("../T4/AF_Footer.php");
     ?>
+    
+
+    
 
 </body>
 
