@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  Team4.PHP (Original Program)
+--  AF_UserTable.PHP (Original Program)
 --  ArcticFox Home Page
---  LastUpDate: 10/22/21
---  This will be our home page that will link to everything on the site
+--  LastUpDate: 11/1/21
+--  This will show our User table 
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
@@ -89,30 +89,18 @@
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
     echo "<tr>"; //This is the table header
-        echo "<th>userID</th>";
-        echo "<th>username</th>";
-        echo "<th>password</th>";
-        echo "<th>password_hash</th>";
-        echo "<th>lastPassChange</th>";
-        echo "<th>acctType</th>";
-        echo "<th>active</th>";
-        echo "<th>DOB</th>";
-        echo "<th>address</th>";
-        echo "<th>phone_number</th>";
+        echo "<th>User ID</th>";
+        echo "<th>Username</th>";
+        echo "<th>First Name</th>";
+        echo "<th>Last Name</th>";
 
     if ($r) {
         while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
             echo "<tr>"; //This is where you echo all the data
                 echo "<td> " . $row[0] ."</td>";
                 echo "<td> " . $row[1] ."</td>";
-                echo "<td> " . $row[2] ."</td>";
                 echo "<td> " . $row[3] ."</td>";
                 echo "<td> " . $row[4] ."</td>";
-                echo "<td> " . $row[5] ."</td>";
-                echo "<td> " . $row[6] ."</td>";
-                echo "<td> " . $row[7] ."</td>";
-                echo "<td> " . $row[8] ."</td>";
-                echo "<td> " . $row[9] ."</td>";
             echo "</tr>"; 
         }
     }

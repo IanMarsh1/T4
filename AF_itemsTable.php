@@ -3,7 +3,7 @@
 --  AF_IteamsTable.PHP (Original Program)
 --  ArcticFox Items Table
 --  LastUpDate: 11/1/21
---  This will show our iteams table 
+--  This will show our items table 
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 

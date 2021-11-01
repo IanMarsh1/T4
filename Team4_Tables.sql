@@ -17,6 +17,8 @@ drop table if exists T4_Shipment;
 create table if not exists T4_Users (
 	userID int primary key unique auto_increment not null,
 	username varchar(16) not null,
+	fname varchar(16) not null,
+	lname varchar(16) not null,
 	password char(32) not null,
 	password_hash char(32),
 	lastPassChange timestamp not null,
@@ -28,14 +30,14 @@ create table if not exists T4_Users (
 );
 
 -- Account made for Professor Tokash, as well as the three members of Group 4.
-insert into T4_Users (userID, username, password, lastPassChange, acctType, active) 
-values (1, "ATokash445", "ProfAPT0", current_timestamp(), "Admin", "A");
-insert into T4_Users (username, password, lastPassChange, acctType, active, DOB) 
-values ("ALopez327", "admin002", current_timestamp(), "Admin", "A", "2001-09-13");
-insert into T4_Users (username, password, lastPassChange, acctType, active, DOB) 
-values ("IMarsh254", "admin003", current_timestamp(), "Admin", "A", "2001-09-04");
-insert into T4_Users (username, password, lastPassChange, acctType, active, DOB) 
-values ("LPecovic119", "admin004", current_timestamp(), "Admin", "A", "2002-09-13");
+insert into T4_Users (userID, username, fname, lname, password, lastPassChange, acctType, active) 
+values (1, "ATokash445", "ProfAPT0", "Andrew", "Tokash", current_timestamp(), "Admin", "A");
+insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
+values ("ALopez327", "admin002", "Antonio", "Lopez", current_timestamp(), "Admin", "A", "2001-09-13");
+insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
+values ("IMarsh254", "admin003", "Ian", "Marsh", current_timestamp(), "Admin", "A", "2001-09-04");
+insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
+values ("LPecovic119", "admin004", "Luke", "Pecovic", current_timestamp(), "Admin", "A", "2002-09-13");
 
 
 -- Creates a table that will hold all necessary information for the products that we sell.
@@ -97,6 +99,6 @@ select * from T4_Items;
 
 explain T4_Suppliers;
 select * from T4_Suppliers;
-
+ 
 explain T4_Shipment;
 select * from T4_Shipment;
