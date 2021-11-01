@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  Team4.PHP (Original Program)
---  ArcticFox Home Page
---  LastUpDate: 10/22/21
---  This will be our home page that will link to everything on the site
+--  AF_IteamsTable.PHP (Original Program)
+--  ArcticFox Items Table
+--  LastUpDate: 11/1/21
+--  This will show our iteams table 
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
