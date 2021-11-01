@@ -95,23 +95,29 @@
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
     echo "<tr>"; //This is the table header
-        echo "<th>itemID</th>";
-        echo "<th>itemName</th>";
-        echo "<th>itemPrice</th>";
-        echo "<th>modelNum</th>";
-        echo "<th>quantityAvailable</th>";
-        echo "<th>itemCategory</th>";
+    echo "<th>itemID</th>";
+    echo "<th>itemName</th>";
+    echo "<th>itemPrice</th>";
+    echo "<th>modelNum</th>";
+    echo "<th>quantityAvailable</th>";
+    echo "<th>itemWeight</th>";
+    echo "<th>itemDimensions</th>";
+    echo "<th>description</th>";
+    echo "<th>itemCategory</th>";
         
 
     if ($r) {
         while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
             echo "<tr>"; //This is where you echo all the data
-                echo "<td> " . $row[0] ."</td>";
-                echo "<td> " . $row[1] ."</td>";
-                echo "<td> " . $row[2] ."</td>";
-                echo "<td> " . $row[3] ."</td>";
-                echo "<td> " . $row[4] ."</td>";
-                echo "<td> " . $row[5] ."</td>";
+            echo "<td> " . $row[0] ."</td>";
+            echo "<td> " . $row[1] ."</td>";
+            echo "<td> " . $row[2] ."</td>";
+            echo "<td> " . $row[3] ."</td>";
+            echo "<td> " . $row[4] ."</td>";
+            echo "<td> " . $row[5] ."</td>";
+            echo "<td> " . $row[6] ."</td>";
+            echo "<td> " . $row[7] ."</td>";
+            echo "<td> " . $row[8] ."</td>";
                 
             echo "</tr>"; 
         }
