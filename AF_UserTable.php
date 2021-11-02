@@ -12,7 +12,7 @@
     <title>ArcticFox User Table</title>
     <meta charset="UTF-8">
 
-    <!-- CSS -->
+    <!-- CSS Code -->
     <style>
         img {
             display: block;
@@ -84,8 +84,7 @@
             text-decoration: underline;
             font-size: 18px;
         }
-    </style><!-- https://www.w3schools.com/html/html_links_colors.asp-->
-    <!-- I went online to find out how to change the way links look -->
+    </style>
 </head>
 
 <body style="background-color:#00a84c;">
@@ -94,7 +93,8 @@
         <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
     </header>
 
-    <nav style="background-color:#036933;"> <!-- Nav bar with links to the other pages of the website -->
+    <nav style="background-color:#036933;"> 
+	<!-- Navigation bar, links to other locations on the website -->
         <ul style="color:#dfe7d3;">
             <li><a href="AF_Construction.php">Snowboards for Sale</a></li>
             <li><a href="AF_Construction.php">Snowboards for Rent</a></li>
@@ -103,6 +103,7 @@
             <li><a href="AF_Construction.php">Employee Login</a></li>
             <li><a href="AF_AdminPage.php">Admin Page</a></li>
 
+			<!-- Search bar (work in progress, not functional yet) -->
             <li><div class="topnav" text-align: center;>
                 <input type="text" placeholder="Search..">
               </div></li>
@@ -116,22 +117,23 @@
         <hr>
         
     <?php
-    REQUIRE ("../Connect_db.php"); //You need a ../ becuase this file is in the parent folder
+    REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
-    $q = "SELECT * FROM T4_Users"; # We put command in $q   -  in the example we have t4_Users
-    $r = mysqli_query ( $dbc , $q );       # this runs commands,
+    $q = "SELECT * FROM T4_Users"; 		   // Calls to return the T4_Suppliers values from the table 
+    $r = mysqli_query ( $dbc , $q );       // Checks to see if the command worked or not
 
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
-    echo "<tr>"; //This is the table header
+		echo "<tr>"; // This is the table header, tells us the column names for the SQL table
         echo "<th>User ID</th>";
         echo "<th>Username</th>";
         echo "<th>First Name</th>";
         echo "<th>Last Name</th>";
 
+	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
     if ($r) {
         while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
-            echo "<tr>"; //This is where you echo all the data
+            echo "<tr>"; 
                 echo "<td> " . $row[0] ."</td>";
                 echo "<td> " . $row[1] ."</td>";
                 echo "<td> " . $row[3] ."</td>";
@@ -140,7 +142,7 @@
         }
     }
     else { 
-        echo "<li>" . mysqli_error( $dbc ) . "</li>" ;
+        echo "<li>" . mysqli_error( $dbc ) . "</li>" ;   // Error message
     }
     echo "</tr>";
     echo "</Table>";
@@ -149,6 +151,7 @@
     <br>
 
     <hr>
+	<!-- Logo that we are using for this website -->
     <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
     
     </main>
