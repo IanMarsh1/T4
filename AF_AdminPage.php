@@ -89,9 +89,9 @@
         <ul style="color:#dfe7d3;">
             <li><a href="AF_HTMLReferencePage.php">HTML/CSS Reference</a></li>
             <li><a href="AF_MYSQLReferencePage.php">MySQL Reference</a></li>
-            <li><a href="AF_UserTable.php">Show User Table </a></li>
-            <li><a href="AF_ItemsTable.php">Show Items Table</a></li>
-            <li><a href="AF_SuppliersTable.php">Show Suppliers Table </a></li>
+            <li><a href="AF_ExplainUserTable.php">Explain User Table </a></li>
+            <li><a href="AF_ExplainItemsTable.php">Explain Items Table</a></li>
+            <li><a href="AF_ExplainSuppliersTable.php">Explain Suppliers Table </a></li>
             <li><a href="AF_Doc.pdf">Requirements and Design Document </a></li>
         </ul>
         <hr style="color:#053386;">

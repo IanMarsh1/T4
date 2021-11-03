@@ -52,6 +52,14 @@
             text-decoration: underline;
             font-size: 18px;
         }
+        h3{
+            background-color: coral;
+            text-align: center;
+            
+        }
+        a{
+            font-size: 40px;
+        }
     </style><!-- https://www.w3schools.com/html/html_links_colors.asp-->
     <!-- I went online to find out how to change the way links look -->
 </head>
@@ -78,6 +86,14 @@
     </nav>
     
     <main> <!-- Info on the wibsite -->
+
+        <p><a href="AF_ShowItemsTable.php">Items</a> <a href="AF_ShowSuppliersTable.php">Supp</a>
+        <a href="AF_ShowUserTable.php">User</a></p>
+
+
+
+
+
         <hr style="color:#053386;">
         <h2>Who are we?</h2>
         <p style="text-align: center;font-size: 20px;">ArcticFox is a retail company specializing in snowboarding equipment and clothing, which

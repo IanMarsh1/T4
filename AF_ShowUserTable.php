@@ -113,9 +113,6 @@
     
     <main> 
         
-        <h3>ADMIN PAGE <br>User Table</h3>
-        <hr>
-        
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
@@ -158,7 +155,7 @@
 
     <!--- This is the footer file --->
     <?php
-    define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
+    define("FILE_AUTHOR","Ian Marsh");
     INCLUDE ("../T4/AF_Footer.php");
     ?>
     
