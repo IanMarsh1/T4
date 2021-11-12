@@ -60,6 +60,14 @@ insert into T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCate
 values ("Standard Snowboard", 60, 144531, 3, "Equipment");
 insert into T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
 values ("Standard Snowgloves", 25, 144532, 1, "Clothing");
+insert into T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
+values ("Snowboard Bindings", 70, 144533, 4, "Equipment");
+insert into T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
+values ("Snowboard Jacket", 200, 144534, 5, "Clothing");
+insert into T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
+values ("Snowboard Hoodie", 50, 144535, 2, "Clothing");
+insert into T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
+values ("Snowboard Socks", 20, 144536, 4, "Clothing");
 
 -- Creates a table that holds information about our suppliers.
 create table if not exists T4_Suppliers (
@@ -73,6 +81,17 @@ create table if not exists T4_Suppliers (
 -- Using a real-world snowboard supplier as an example in the database.
 insert into T4_Suppliers (supplierID, supplierName, supplierEmail, supplierPhoneNumber, address) 
 values (1, "Backcountry", "backcountry@gmail.com", "1-800-409-4502", "1640 W Redstone Center Dr. Ste. 115 Park City, UT 84098");
+
+insert into T4_Suppliers (supplierName, supplierEmail, supplierPhoneNumber, address) 
+values ("Capita", "info@capitasnowboarding.com", "1-206-932-0543", "4917 14th Ave NW Seattle, WA 98107");
+
+insert into T4_Suppliers (supplierName, supplierEmail, supplierPhoneNumber, address) 
+values ("Burton", "info@burton.com", "1-800-583-9341", "162 College Street Burlington, VT 05401");
+
+insert into T4_Suppliers (supplierName, supplierEmail, supplierPhoneNumber, address) 
+values ("Spyder", "info@spyder.com", "1-800-230-0993", "4740 Walnut St Boulder, CO, 80301-2538 United States");
+
+
 
 -- Creates a table that keeps track of all shipments that come from our suppliers.
 create table if not exists T4_Shipment (
