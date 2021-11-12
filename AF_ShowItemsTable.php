@@ -27,14 +27,14 @@
         }
 
         a:link {
-            color: black;
+            color:  white;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
         }
 
         a:visited {
-            color: black;
+            color: white;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
@@ -98,7 +98,7 @@
     </header>
 
     <?php
-		include "AF_NavBar.php";
+		//include "AF_NavBar.php";
     ?>
 
 
