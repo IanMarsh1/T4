@@ -130,15 +130,13 @@
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
     echo "<tr>"; // This is the table header, tells us the column names for the SQL table
-    echo "<th>itemID</th>";
-    echo "<th>itemName</th>";
-    echo "<th>itemPrice</th>";
-    echo "<th>modelNum</th>";
-    echo "<th>quantityAvailable</th>";
-    echo "<th>itemWeight</th>";
-    echo "<th>itemDimensions</th>";
-    echo "<th>description</th>";
-    echo "<th>itemCategory</th>";
+    echo "<th>Field</th>";
+    echo "<th>Type</th>";
+    echo "<th>Null</th>";
+    echo "<th>Key</th>";
+    echo "<th>Default</th>";
+    echo "<th>Extra</th>";
+    
         
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
@@ -151,9 +149,7 @@
             echo "<td> " . $row[3] ."</td>";
             echo "<td> " . $row[4] ."</td>";
             echo "<td> " . $row[5] ."</td>";
-            echo "<td> " . $row[6] ."</td>";
-            echo "<td> " . $row[7] ."</td>";
-            echo "<td> " . $row[8] ."</td>";
+            
                 
             echo "</tr>"; 
         }
