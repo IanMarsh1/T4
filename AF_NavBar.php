@@ -1,53 +1,46 @@
-<!-- 
-	THIS SHIT IS KINDA WONKY
-	SIZING IS NOT COMPATIBLE I THINK
- -->
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-	<head>
-		<title> Header Bar </title>
-		<meta charset="utf-8">
+/*
+				  #IN-LINE CSS#
+		th{
+			background-color:#036933;
+		}
 		
-		<style>
-			ul {
-			  float: left;
-			  list-style-type: none;
-			  margin: 0;
-			  padding: 0;
-			  width: 200px;
-			  background-color: #f1f1f1;
-				}
+		a:link {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-			li a {
-			  float: left;
-			  display: block;
-			  color: #000;
-			  padding: 8px 4px;
-			  text-decoration: none;
-			}
+        a:visited {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-			li a:hover {
-			  background-color: #555;
-			  color: white;
-			}
+*/
+
+echo '<table><table border = 1; style= "width:100%">';
+	
+echo	'<col style="width:10%">';
+echo 	'<col style="width:10%">';
+echo	'<col style="width:10%">';
+echo	'<col style="width:14%">';
+echo	'<col style="width:14%">';
+echo	'<col style="width:20%">';
+	
+			//		<!-- Info on the website -->
+echo		'<tr>';
+echo         '<th><a href="AF_ShowItemsTable.php">Items</a></th>';
+echo        '<th><a href="AF_ShowSuppliersTable.php">Supp</a></th>';
+echo        '<th><a href="AF_ShowUserTable.php">User</a></th>';
+echo        '<th><a href="AF_Construction.php">Employee Login</a></th>';
+echo        '<th><a href="AF_AdminPage.php">Admin Page</a></th>';
+echo        '<th><div class="topnav" text-align: center;><input type="text" placeholder="Search.."></div></th>';
+echo	'</tr>';
 		
-		</style>
-		
-	</head>
+echo '</table>';
 	
-	<body>
-	
-		<h2>Vertical Navigation Bar</h2>
-
-		<ul>
-		  <li><a href="#home">Home</a></li>
-		  <li><a href="#news">News</a></li>
-		  <li><a href="#contact">Contact</a></li>
-		  <li><a href="#about">About</a></li>
-		</ul>
-	
-	</body>
-	
-	
-</html>
+?>

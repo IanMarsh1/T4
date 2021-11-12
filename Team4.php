@@ -26,14 +26,14 @@
         }
 
         a:link {
-            color: black;
+            color: white;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
         }
 
         a:visited {
-            color: black;
+            color: white;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
@@ -57,6 +57,10 @@
             text-align: center;
             
         }
+		th{
+			background-color:#036933;
+		}
+		
         a{
             font-size: 40px;
         }
@@ -70,29 +74,11 @@
         <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
     </header>
 
-    <nav style="background-color:#036933;"> <!-- Nav bar with links to the other pages of the website -->
-        <ul style="color:#dfe7d3;">
-            <li><a href="AF_Construction.php">Snowboards for Sale</a></li>
-            <li><a href="AF_Construction.php">Snowboards for Rent</a></li>
-            <li><a href="AF_Construction.php">Snowboard Equipment</a></li>
-            <li><a href="AF_Construction.php">Find a Location</a></li>
-            <li><a href="AF_Construction.php">Employee Login</a></li>
-            <li><a href="AF_AdminPage.php">Admin Page</a></li>
-
-            <li><div class="topnav" text-align: center;>
-                <input type="text" placeholder="Search..">
-              </div></li>
-        </ul>
-    </nav>
-    
-    <main> <!-- Info on the wibsite -->
-
-        <p><a href="AF_ShowItemsTable.php">Items</a> <a href="AF_ShowSuppliersTable.php">Supp</a>
-        <a href="AF_ShowUserTable.php">User</a></p>
-
-
-
-
+	<?php
+	include "AF_NavBar.php";
+    ?>
+	
+    <main> 
 
         <hr style="color:#053386;">
         <h2>Who are we?</h2>
