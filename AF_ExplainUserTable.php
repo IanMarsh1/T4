@@ -125,19 +125,23 @@
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
 		echo "<tr>"; // This is the table header, tells us the column names for the SQL table
-        echo "<th>User ID</th>";
-        echo "<th>Username</th>";
-        echo "<th>First Name</th>";
-        echo "<th>Last Name</th>";
+    echo "<th>Field</th>";
+    echo "<th>Type</th>";
+    echo "<th>Null</th>";
+    echo "<th>Key</th>";
+    echo "<th>Default</th>";
+    echo "<th>Extra</th>";
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
     if ($r) {
         while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
             echo "<tr>"; 
-                echo "<td> " . $row[0] ."</td>";
-                echo "<td> " . $row[1] ."</td>";
-                echo "<td> " . $row[3] ."</td>";
-                echo "<td> " . $row[4] ."</td>";
+            echo "<td> " . $row[0] ."</td>";
+            echo "<td> " . $row[1] ."</td>";
+            echo "<td> " . $row[2] ."</td>";
+            echo "<td> " . $row[3] ."</td>";
+            echo "<td> " . $row[4] ."</td>";
+            echo "<td> " . $row[5] ."</td>";
             echo "</tr>"; 
         }
     }
