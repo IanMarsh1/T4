@@ -107,7 +107,22 @@
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
-    $q = "SELECT * FROM T4_Items";       // Calls to return the T4_Suppliers values from the table 
+    if(isset($_POST{'sort'})){
+        $sort_type = " " . $_POST{'sort'};
+    }
+    else {
+        $sort_type = "";
+    }
+    if(isset($_POST{'sort2'})){
+        $sort2_type = " ORDER BY ".$_POST{'sort2'};
+    }
+    else {
+        $sort2_type = "";
+    }
+    
+    
+
+    $q = "SELECT * FROM T4_Items" .  $sort2_type . $sort_type;       // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
@@ -141,6 +156,23 @@
     }
     echo "</tr>";
     echo "</Table>";
+
+    echo "<form action ='". $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
+
+    echo "<input type = 'radio' name = 'sort2' value = 'itemID'> Item ID";
+    echo "<input type = 'radio' name = 'sort2' value = 'itemName'> Name";
+    echo "<input type = 'radio' name = 'sort2' value = 'itemPrice'> Price";
+    echo "<input type = 'radio' name = 'sort2' value = 'modelNum'> Model Number";
+    echo "<input type = 'radio' name = 'sort2' value = 'quantityAvailable'> Quantity Available";
+    echo "<input type = 'radio' name = 'sort2' value = 'itemCategory'> Category";
+
+
+    echo "<br><input type = 'radio' name = 'sort' value = 'ASC'> ASC";
+    echo "<input type = 'radio' name = 'sort' value = 'DESC'> DESC";
+
+    echo "<br> <input type = 'submit' value = 'Sort It!' Style = 'color: white; background-color: coral;'>";
+
+    echo "</form>";
     
     ?>
     <br>
