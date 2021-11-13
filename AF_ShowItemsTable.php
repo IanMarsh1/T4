@@ -55,7 +55,7 @@
         }
 
         table {
-            background-color: rgb(11, 80, 11);
+            background-color: rgb(223,231,211);
             color: black;
             border-collapse: collapse;
             border: 1px;
@@ -65,6 +65,7 @@
             margin-left: auto;
             
         }
+        
 
         th {
             background-color: gray;
@@ -97,9 +98,11 @@
         </a> 
     </header>
 
+    <nav>
     <?php
-		//include "AF_NavBar.php";
+		include "AF_NavBar.php";
     ?>
+    </nav>
 
 
     <main>
@@ -125,7 +128,18 @@
     $q = "SELECT * FROM T4_Items" .  $sort2_type . $sort_type;       // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 
-    echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
+    echo "<Table border=2 style = 
+
+            'color: black;
+            border-collapse: collapse;
+            border: 1px;
+            font-family: Arial;
+            font-weight: normal;
+            margin-right: auto;
+            margin-left: auto;
+    
+    
+    '>";
 
     echo "<tr>"; // This is the table header, tells us the column names for the SQL table
     echo "<th>Item ID</th>";
@@ -145,7 +159,6 @@
             echo "<td> " . $row[2] ."</td>";
             echo "<td> " . $row[3] ."</td>";
             echo "<td> " . $row[4] ."</td>";
-            
             echo "<td> " . $row[8] ."</td>";
                 
             echo "</tr>"; 

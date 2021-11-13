@@ -26,14 +26,14 @@
         }
 
         a:link {
-            color: white;
+            color: #dfe7d3;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
         }
 
         a:visited {
-            color: white;
+            color: #dfe7d3;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
@@ -57,9 +57,7 @@
             text-align: center;
             
         }
-		th{
-			background-color:#036933;
-		}
+		
 		
         a{
             font-size: 40px;
@@ -98,7 +96,7 @@
         <hr style="color:#053386;">
 
         <h2>What can the Web Site do for you?</h2>
-        <p style="text-align: center;font-size: 20px;">On ArcticFox.com, you will be able to rent or buy all your snowboarding needs. The site is a one-stop 
+        <p style="text-align: center; font-size: 20px;">On ArcticFox.com, you will be able to rent or buy all your snowboarding needs. The site is a one-stop 
             shop to help complement our already successful in-store business. The site will also help our employees make 
             your experience better by offering real-time quantity numbers and much more.
         </p>
