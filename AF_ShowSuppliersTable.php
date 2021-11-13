@@ -84,6 +84,10 @@
             text-decoration: underline;
             font-size: 18px;
         }
+		
+		form{
+			text-align:center;
+		}
     </style>
 </head>
 
@@ -106,7 +110,7 @@
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
-    $q = "SELECT * FROM T4_Suppliers"; // Calls to return the T4_Suppliers values from the table 
+    $q = "SELECT * FROM T4_Suppliers $sort_type"; // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );   // Checks to see if the command worked or not
 
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
@@ -132,6 +136,16 @@
     }
     echo "</tr>";
     echo "</Table>";
+	
+	// Form to process different sort options
+	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
+	echo "<input type = 'radio' name = 'sort' value = 'supplierID'> ID";
+	echo "<input type = 'radio' name = 'sort' value = 'supplierName'> Name";
+	echo "<input type = 'radio' name = 'sort' value = 'supplierEmail'> Email";
+	echo "<input type = 'radio' name = 'direct' value = 'asc'> Ascending";
+	echo "<input type = 'radio' name = 'direct' value = 'desc'> Descending";
+	echo "<p> <input type = 'submit' style='color:white; background-color:green' value = 'Refresh'>";
+	echo "</form>";
     
     ?>
     <br>
