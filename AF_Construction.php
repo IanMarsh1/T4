@@ -52,31 +52,34 @@
             text-decoration: underline;
             font-size: 18px;
         }
-    </style><!-- https://www.w3schools.com/html/html_links_colors.asp-->
-    <!-- I went online to find out how to change the way links look -->
+    </style>
 </head>
 
 <body style="background-color:#00a84c;">
 
+    <!-- Header -->
     <header style="background-color:#dfe7d3;">
         <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
     </header>
 
+    <!-- NAV -->
     <nav>
-	<?php
-	include "AF_NavBar.php";
-    ?>
+        <?php
+		    include "AF_NavBar.php";
+        ?>
     </nav>
     
-    <main> <!-- Info on the wibsite -->
+    <!-- IMG MEME -->
+    <main> 
         <br>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhW-AatPfOpXJKuKDEP1efVHm-vYT3PBROEQ&usqp=CAU" width="408" height="279"></a>
-        <br> <!--img = cool-->
+        <br> 
     </main>
 
+    <!-- Footer -->
     <?php
-    define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
-    INCLUDE ("../T4/AF_Footer.php");
+        define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
+        INCLUDE ("../T4/AF_Footer.php");
     ?>
 
 </body>

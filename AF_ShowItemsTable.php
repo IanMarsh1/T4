@@ -99,9 +99,9 @@
     </header>
 
     <nav>
-    <?php
-		include "AF_NavBar.php";
-    ?>
+        <?php
+		    include "AF_NavBar.php";
+        ?>
     </nav>
 
 

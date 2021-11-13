@@ -19,16 +19,18 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         h2 {
             color: #dfe7d3;
             text-align: center;
             font-size: 30px;
         }
+
         h3 {
             color: black;
             text-align: center;
             font-size: 25px;
-            background-color:#df5b52;
+            background-color: #df5b52;
         }
 
         a:link {
@@ -58,23 +60,29 @@
             text-decoration: underline;
             font-size: 18px;
         }
-    </style><!-- https://www.w3schools.com/html/html_links_colors.asp-->
-    <!-- I went online to find out how to change the way links look -->
+    </style>
 </head>
 
 <body style="background-color:#00a84c;">
+    
 
+    <!-- Header -->
     <header style="background-color:#dfe7d3;">
-        <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header  -->
+        <a href="Team4.php">
+            <h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1>
+        </a> 
     </header>
 
+    <!-- NAV -->
     <nav>
-    <?php
-		include "AF_NavBar.php";
-    ?>
+        <?php
+        include "AF_NavBar.php";
+        ?>
     </nav>
-
-    <main> <!-- Info on the wibsite -->
+    
+    <!-- MAIN -->
+    <main>
+        <!-- Admin page links to sites -->
         <h3>ADMIN PAGE</h3>
         <hr style="color:#053386;">
         <ul style="color:#dfe7d3;">
@@ -86,14 +94,18 @@
             <li><a href="AF_Doc.pdf">Requirements and Design Document </a></li>
         </ul>
         <hr style="color:#053386;">
+
+        <!-- logo -->
         <br>
-        <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
-        <br> <!--img = cool-->
+            <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
+        <br>
+        
     </main>
 
+    <!-- Footer -->
     <?php
-    define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
-    INCLUDE ("../T4/AF_Footer.php");
+        define("FILE_AUTHOR", "Antonio Lopez, Luke Pecovic, and Ian Marsh");
+        include("../T4/AF_Footer.php");
     ?>
 
 </body>

@@ -95,9 +95,9 @@
 
 	
     <nav>
-    <?php
-		include "AF_NavBar.php";
-    ?>
+        <?php
+		    include "AF_NavBar.php";
+        ?>
     </nav>
     
     
@@ -144,8 +144,8 @@
 
     <!--- This calls the footer file --->
     <?php
-    define("FILE_AUTHOR","Antonio Lopez");
-    INCLUDE ("../T4/AF_Footer.php");
+        define("FILE_AUTHOR","Antonio Lopez");
+        INCLUDE ("../T4/AF_Footer.php");
     ?>
     
 

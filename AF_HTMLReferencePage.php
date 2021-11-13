@@ -90,19 +90,10 @@
         <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
     </header>
 
-    <nav style="background-color:#036933;"> <!-- Nav bar with links to the other pages of the website -->
-        <ul style="color:#dfe7d3;">
-            <li><a href="">Snowboards for Sale</a></li>
-            <li><a href="">Snowboards for Rent</a></li>
-            <li><a href="">Snowboard Equipment</a></li>
-            <li><a href="">Find a Location</a></li>
-            <li><a href="">Employee Login</a></li>
-            <li><a href="AF_AdminPage.php">Admin Page</a></li>
-
-            <li><div class="topnav" text-align: center;>
-                <input type="text" placeholder="Search..">
-              </div></li>
-        </ul>
+    <nav>
+        <?php
+		    include "AF_NavBar.php";
+        ?>
     </nav>
     
     <main> <!-- Info on the wibsite -->

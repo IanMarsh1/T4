@@ -97,23 +97,10 @@
         </a> 
     </header>
 
-    <nav style="background-color:#036933;">
-        <!-- Navigation bar, links to other locations on the website -->
-        <ul style="color:#dfe7d3;">
-            <li><a href="AF_Construction.php">Snowboards for Sale</a></li>
-            <li><a href="AF_Construction.php">Snowboards for Rent</a></li>
-            <li><a href="AF_Construction.php">Snowboard Equipment</a></li>
-            <li><a href="AF_Construction.php">Find a Location</a></li>
-            <li><a href="AF_Construction.php">Employee Login</a></li>
-            <li><a href="AF_AdminPage.php">Admin Page</a></li>
-
-			<!-- Search bar (work in progress, not functional yet) -->
-            <li>
-                <div class="topnav" text-align: center;>
-                    <input type="text" placeholder="Search..">
-                </div>
-            </li>
-        </ul>
+    <nav>
+        <?php
+		    include "AF_NavBar.php";
+        ?>
     </nav>
 
 
@@ -122,14 +109,14 @@
     <hr>
 
     <?php
-    REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    REQUIRE ("../Connect_db.php");
 
-    $q = "EXPLAIN T4_Items";       // Calls to return the T4_Suppliers values from the table 
-    $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
+    $q = "EXPLAIN T4_Items";       
+    $r = mysqli_query ( $dbc , $q ); 
 
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
-    echo "<tr>"; // This is the table header, tells us the column names for the SQL table
+    echo "<tr>"; 
     echo "<th>Field</th>";
     echo "<th>Type</th>";
     echo "<th>Null</th>";

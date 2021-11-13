@@ -71,10 +71,12 @@
     <header style="background-color:#dfe7d3;">
         <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
     </header>
-
-	<?php
-	include "AF_NavBar.php";
-    ?>
+    
+    <nav>
+	    <?php
+	        include "AF_NavBar.php";
+        ?>
+    </nav>
 	
     <main> 
 
