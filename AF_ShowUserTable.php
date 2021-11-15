@@ -84,6 +84,9 @@
             text-decoration: underline;
             font-size: 18px;
         }
+        form{
+			text-align:center;
+		}
     </style>
 </head>
 
@@ -105,8 +108,43 @@
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
-    $q = "SELECT * FROM T4_Users"; 		   // Calls to return the T4_Suppliers values from the table 
+    if(isset($_POST['direct'])){
+        $sort_type = " " . $_POST['direct'];
+    }
+    else {
+        $sort_type = "";
+    }
+    
+    if(isset($_POST['sort'])){
+        $sort2_type = " ORDER BY ".$_POST['sort'];}
+    else {
+        $sort2_type = "";
+    }
+
+
+    $q = "SELECT * FROM T4_Users" . $sort2_type . $sort_type; 		   // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );       // Checks to see if the command worked or not
+
+    echo "<br>";
+    
+    echo "<form action ='". $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
+
+    echo " Sort <select name='sort'>";
+            echo "  <option value='userID'> User ID </option>";  
+            echo "  <option value='username'> Username </option>";  
+            echo "  <option value='fname'> First Name </option>";
+            echo "  <option value='lname'> Last Name </option>";   
+            
+    echo "</select>";
+
+    echo " Sort <select name='direct'>";
+            echo "  <option value='ASC'> Ascending </option>";
+            echo "  <option value='DESC'> Descending </option>";
+    echo "</select>";
+
+    echo "  <input type = 'submit' value = 'Sort It!' Style = 'color: white; background-color: coral;'>";
+
+    echo "</form>";
 
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 

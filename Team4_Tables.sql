@@ -75,8 +75,8 @@ create table if not exists T4_Suppliers (
 	supplierName varchar(30) not null default('N/A'),
 	supplierEmail varchar(30) not null default('N/A'),
 	supplierPhoneNumber varchar(30) default('N/A'),
-	address text default('N/A')
-	active enum('Y','N') default 'Y';
+	address text default('N/A'),
+	active enum('Y','N') default ('Y')
 );
 
 -- Using a real-world snowboard supplier as an example in the database.

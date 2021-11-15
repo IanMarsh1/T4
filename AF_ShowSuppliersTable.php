@@ -119,6 +119,29 @@
     $q = "SELECT * FROM t4_Suppliers WHERE active='Y' $sort_type"; // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );   // Checks to see if the command worked or not
 
+    // Form to process different sort options
+    echo "<br>";
+
+
+    echo "<form action ='". $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
+
+    
+
+    echo " Sort <select name='sort'>";
+            echo "  <option value='supplierID'> ID </option>";  
+            echo "  <option value='supplierName'> Name </option>";  
+            echo "  <option value='supplierEmail'> Email </option>";  
+    echo "</select>";
+
+    echo " Sort <select name='direct'>";
+            echo "  <option value='ASC'> Ascending </option>";
+            echo "  <option value='DESC'> Descending </option>";
+    echo "</select>";
+
+    echo "  <input type = 'submit' value = 'Sort It!' Style = 'color: white; background-color: coral;'>";
+
+    echo "</form>";
+
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
 
     echo "<tr>"; // This is the table header, tells us the column names for the SQL table
@@ -144,17 +167,9 @@
     echo "</tr>";
     echo "</Table>";
 	
-	// Form to process different sort options
-	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	echo "<input type = 'radio' name = 'sort' value = 'supplierID'> ID";
-	echo "<input type = 'radio' name = 'sort' value = 'supplierName'> Name";
-	echo "<input type = 'radio' name = 'sort' value = 'supplierEmail'> Email";
-	echo "<input type = 'radio' name = 'direct' value = 'asc'> Ascending";
-	echo "<input type = 'radio' name = 'direct' value = 'desc'> Descending";
-	echo "<p> <input type = 'submit' style='color:white; background-color:green' value = 'Refresh'>";
-	echo "</form>";
 	
 	echo "<br> <a href= 'addInTable.php'> Want to Add a Company? Click Here </a>";
+	
     
     ?>
     <br>
