@@ -110,7 +110,13 @@
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
-    $q = "SELECT * FROM T4_Suppliers $sort_type"; // Calls to return the T4_Suppliers values from the table 
+	if(isset($_POST['sort'])){
+		$sort_type = "ORDER BY " . $_POST['sort']  . " " . $_POST['direct'];
+	}else{
+		$sort_type = "";
+	}
+
+    $q = "SELECT * FROM t4_Suppliers WHERE active='Y' $sort_type"; // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );   // Checks to see if the command worked or not
 
     echo "<Table border=2 style = 'background-color: #dfe7d3 '>";
@@ -119,6 +125,7 @@
     echo "<th>Supplier ID</th>";
     echo "<th>Supplier Name</th>";
     echo "<th>Email</th>";
+    echo "<th>Delete</th>";
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
     if ($r) {
@@ -127,7 +134,7 @@
             echo "<td> " . $row[0] ."</td>";
             echo "<td> " . $row[1] ."</td>";
             echo "<td> " . $row[2] ."</td>";
-                
+            echo "<td> <a href = 'http://localhost/T4/deleteInTable.php?id=$row[0]&active=N'> Delete </a></td>";
             echo "</tr>"; 
         }
     }
@@ -146,6 +153,8 @@
 	echo "<input type = 'radio' name = 'direct' value = 'desc'> Descending";
 	echo "<p> <input type = 'submit' style='color:white; background-color:green' value = 'Refresh'>";
 	echo "</form>";
+	
+	echo "<br> <a href= 'addInTable.php'> Want to Add a Company? Click Here </a>";
     
     ?>
     <br>
