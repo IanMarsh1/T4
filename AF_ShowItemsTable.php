@@ -110,14 +110,14 @@
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
-    if(isset($_POST{'sort'})){
-        $sort_type = " " . $_POST{'sort'};
+    if(isset($_POST['sort'])){
+        $sort_type = " " . $_POST['sort'];
     }
     else {
         $sort_type = "";
     }
-    if(isset($_POST{'sort2'})){
-        $sort2_type = " ORDER BY ".$_POST{'sort2'};
+    if(isset($_POST['sort2'])){
+        $sort2_type = " ORDER BY ".$_POST['sort2'];
     }
     else {
         $sort2_type = "";
