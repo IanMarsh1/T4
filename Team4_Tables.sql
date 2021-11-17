@@ -24,9 +24,8 @@ create table if not exists T4_Users (
 	lastPassChange timestamp not null,
 	acctType enum('Shareholder', 'Employee', 'Admin'),
 	active enum('Y','N') default ('Y') not null,
-	DOB date not null default('2007-07-24'),
-	address char(40) default("N/A"),
-	phone_number char(10) default('N/A')
+	DOB date default('2007-07-24') not null 
+	
 );
 
 -- Account made for Professor Tokash, as well as the three members of Group 4.
@@ -40,6 +39,7 @@ insert into T4_Users (username, fname, lname, password, lastPassChange, acctType
 values ("LPecovic119", "Luke", "Pecovic", "admin004", current_timestamp(), "Admin", "Y", "2002-09-13");
 
 
+
 -- Creates a table that will hold all necessary information for the products that we sell.
 create table if not exists T4_Items (
 	itemID int primary key unique auto_increment not null,
@@ -47,7 +47,6 @@ create table if not exists T4_Items (
 	itemPrice decimal not null default(0.00),
 	modelNum int unique,
 	quantityAvailable int default(0),
-	--description text default('N/A'),
 	itemCategory enum('Clothing', 'Equipment', "Unsorted") not null default('Unsorted'),
 	active enum('Y','N') default ('Y') not null
 );
