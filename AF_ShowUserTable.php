@@ -122,7 +122,7 @@
     }
 
 
-    $q = "SELECT * FROM T4_Users" . $sort2_type . $sort_type; 		   // Calls to return the T4_Suppliers values from the table 
+    $q = "SELECT * FROM T4_Users WHERE active='Y' " . $sort2_type . $sort_type; 		   // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );       // Checks to see if the command worked or not
 
     echo "<br>";
@@ -153,6 +153,7 @@
         echo "<th>Username</th>";
         echo "<th>First Name</th>";
         echo "<th>Last Name</th>";
+        echo "<th>Delete</th>";
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
     if ($r) {
@@ -162,6 +163,7 @@
                 echo "<td> " . $row[1] ."</td>";
                 echo "<td> " . $row[3] ."</td>";
                 echo "<td> " . $row[4] ."</td>";
+                echo "<td> <a href = 'http://localhost/T4/AF_UserDelete.php?id=$row[0]&active=N'> Delete </a></td>";
             echo "</tr>"; 
         }
     }
