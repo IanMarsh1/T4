@@ -6,17 +6,6 @@
 	$error_message = "";
 
 	// Input Initialization Blocks of Code
-	if (isset($_POST['supplierID'])){
-		$supplierID = $_POST['supplierID'];	
-	}
-	
-	if(isset($_POST['supplierName'])){
-		$supplierName = $_POST['supplierName'];
-	}
-	
-	if(isset($_POST['supplierEmail'])){
-		$supplierEmail = $_POST['supplierEmail'];
-	}
 	
 
 	// Input Validation Blocks of Code											
