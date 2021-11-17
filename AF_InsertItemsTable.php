@@ -87,9 +87,6 @@
             font-size: 25px;
             background-color:#df5b52;
         }
-        form{
-			text-align:center;
-		}
     </style>
 </head>
 
@@ -111,92 +108,112 @@
     <main>
 
     <?php
-    REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    include ("../../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
-    if(isset($_POST['sort'])){
-        $sort_type = " " . $_POST['sort'];
+    if(isset($_POST['itemName'])){
+        $item_name = " " . $_POST['itemName'];
     }
     else {
-        $sort_type = "";
+        $item_name = "";
     }
-    if(isset($_POST['sort2'])){
-        $sort2_type = " ORDER BY ".$_POST['sort2'];}
+    if(isset($_POST['itemPrice'])){
+        $item_price = " " . $_POST['itemPrice'];
+    }
     else {
-        $sort2_type = "";
+        $item_price = "";
     }
+    if(isset($_POST['modelNum'])){
+        $model_num = " " . $_POST['modelNum'];
+    }
+    else {
+        $model_num = "";
+    }
+    if(isset($_POST['quantityAvailable'])){
+        $quantity_available = " " . $_POST['quantityAvailable'];
+    }
+    else {
+        $quantity_available = "";
+    }
+    if(isset($_POST['itemWeight'])){
+        $item_weight = " " . $_POST['itemWeight'];
+    }
+    else {
+        $item_weight = "";
+    }
+    if(isset($_POST['itemDimensions'])){
+        $item_dimensions = " " . $_POST['itemDimensions'];
+    }
+    else {
+        $item_dimensions = "";
+    }
+    if(isset($_POST['description'])){
+        $description = " " . $_POST['description'];
+    }
+    else {
+        $description = "";
+    }
+    if(isset($_POST['itemCategory'])){
+        $item_category = " " . $_POST['itemCategory'];
+    }
+    else {
+        $item_category = "";
+    }
+
+    /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        if (trim($item_name) == ""){
+            $error_message = "Please enter a valid non blank name";
+        }
+        elseif (trim($user_password) == "") {
+            $error_message = "Please enter a valid password";
+        }
+        elseif (ctype_alnum($user_name) == FALSE){
+            $error_message = "Alphanumerics only!";
+        }
+        elseif (ctype_alnum($user_password) == FALSE){
+            $error_message = "Alphanumerics only!";
+        }
+    
+        elseif ($user_password != $user_password2){
+            $error_message = "These passwords do not match!";
+        }
+        
+        }
+        */
     
     
 
-    $q = "SELECT * FROM T4_Items WHERE active = 'Y' " .  $sort2_type . $sort_type;       // Calls to return the T4_Suppliers values from the table 
+    $q = "INSERT INTO T4_Items (itemName, itemPrice, modelNum, quantityAvailable, description, itemCategory) 
+    VALUES " . $item_name . ", " . $item_price . ", " .$model_num . ", " .$quantity_available . ", " . $description . ", " . $item_category;       // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 
-    echo "<br>";
+    
+
+    
+        
+    echo "<h2 style= color: blue ;text-align: center; font-size: 26px;> Insert into table! </h2>";
+	
+    
+    
 
     echo "<form action ='". $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
 
-    echo " Sort <select name='sort2'>";
-            echo "  <option value='ItemID'> Item ID </option>";  
-            echo "  <option value='itemName'> Name </option>";  
-            echo "  <option value='itemPrice'> Price </option>";  
-            echo "  <option value='modelNum'> Model Number </option>";  
-            echo "  <option value='quantityAvailable'> Quantity </option>"; 
-    echo "</select>";
+    
+    echo "<br><input type = 'text' name = 'itemName' value = ''> Name";
+    echo "<br><input type = 'text' name = 'itemPrice' value = ''> Price";
+    echo "<br><input type = 'text' name = 'modelNum' value = ''> Model Number";
+    echo "<br><input type = 'text' name = 'quantityAvailable' value = ''> Quantity Available";
+    echo "<br><input type = 'text' name = 'itemWeight' value = ''> Item Weight";
+    echo "<br><input type = 'text' name = 'itemDiemnsions' value = ''> Item Dimensions";
+    echo "<br><input type = 'text' name = 'description' value = ''> Description";
+    echo "<br><input type = 'text' name = 'itemCategory' value = ''> Category";
 
-    echo " By <select name='sort'>";
-            echo "  <option value='ASC'> ASC </option>";
-            echo "  <option value='DESC'> DESC </option>";
-    echo "</select>";
 
     
 
-    echo "    <input type = 'submit' value = 'Sort It!' Style = 'color: white; background-color: coral;'>";
+    echo "<br> <input type = 'submit' value = 'Submit Changes!' Style = 'color: white; background-color: coral;'>";
 
     echo "</form>";
-
-    echo "<Table border=2 style = 
-
-            'color: black;
-            border-collapse: collapse;
-            border: 1px;
-            font-family: Arial;
-            font-weight: normal;
-            margin-right: auto;
-            margin-left: auto;
-    
-    
-    '>";
-
-    echo "<tr>"; // This is the table header, tells us the column names for the SQL table
-    echo "<th>Item ID</th>";
-    echo "<th>Name</th>";
-    echo "<th>Price</th>";
-    echo "<th>Model Number</th>";
-    echo "<th>Quantity Available</th>";
-    echo "<th>Category</th>";
-        
-
-	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
-    if ($r) {
-        while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
-            echo "<tr>"; 
-            echo "<td> " . $row[0] ."</td>";
-            echo "<td> " . $row[1] ."</td>";
-            echo "<td> " . $row[2] ."</td>";
-            echo "<td> " . $row[3] ."</td>";
-            echo "<td> " . $row[4] ."</td>";
-            echo "<td> " . $row[8] ."</td>";
-            echo "<td> <a href = 'http://localhost/T4/deleteInTable.php?id=$row[0]&active=N'> Delete </a></td>";
-                
-            echo "</tr>"; 
-        }
-    }
-    else { 
-        echo "<li>" . mysqli_error( $dbc ) . "</li>" ;   // Error message
-    }
-    echo "</tr>";
-    echo "</Table>";
-
-    
     
     ?>
     <br>
