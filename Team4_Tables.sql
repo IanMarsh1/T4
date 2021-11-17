@@ -23,7 +23,7 @@ create table if not exists T4_Users (
 	password_hash char(32),
 	lastPassChange timestamp not null,
 	acctType enum('Shareholder', 'Employee', 'Admin'),
-	active enum('A','D','H') default ('A') not null,
+	active enum('Y','N') default ('Y') not null,
 	DOB date not null default('2007-07-24'),
 	address char(40) default("N/A"),
 	phone_number char(10) default('N/A')
@@ -31,13 +31,13 @@ create table if not exists T4_Users (
 
 -- Account made for Professor Tokash, as well as the three members of Group 4.
 insert into T4_Users (userID, username, fname, lname, password, lastPassChange, acctType, active) 
-values (1, "ATokash445", "ProfAPT0", "Andrew", "Tokash", current_timestamp(), "Admin", "A");
+values (1, "ATokash445", "ProfAPT0", "Andrew", "Tokash", current_timestamp(), "Admin", "Y");
 insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
-values ("ALopez327", "admin002", "Antonio", "Lopez", current_timestamp(), "Admin", "A", "2001-09-13");
+values ("ALopez327", "admin002", "Antonio", "Lopez", current_timestamp(), "Admin", "Y", "2001-09-13");
 insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
-values ("IMarsh254", "admin003", "Ian", "Marsh", current_timestamp(), "Admin", "A", "2001-09-04");
+values ("IMarsh254", "admin003", "Ian", "Marsh", current_timestamp(), "Admin", "Y", "2001-09-04");
 insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
-values ("LPecovic119", "admin004", "Luke", "Pecovic", current_timestamp(), "Admin", "A", "2002-09-13");
+values ("LPecovic119", "admin004", "Luke", "Pecovic", current_timestamp(), "Admin", "Y", "2002-09-13");
 
 
 -- Creates a table that will hold all necessary information for the products that we sell.
@@ -50,7 +50,8 @@ create table if not exists T4_Items (
 	itemWeight decimal,
 	itemDimensions varchar(20),
 	description text default('N/A'),
-	itemCategory enum('Clothing', 'Equipment', "Unsorted") not null default('Unsorted')
+	itemCategory enum('Clothing', 'Equipment', "Unsorted") not null default('Unsorted'),
+	active enum('Y','N') default ('Y') not null
 );
 
 -- Sample items that would be sold at our locations.
@@ -76,7 +77,7 @@ create table if not exists T4_Suppliers (
 	supplierEmail varchar(30) not null default('N/A'),
 	supplierPhoneNumber varchar(30) default('N/A'),
 	address text default('N/A'),
-	active enum('Y','N') default ('Y')
+	active enum('Y','N') default ('Y') not null
 );
 
 -- Using a real-world snowboard supplier as an example in the database.
