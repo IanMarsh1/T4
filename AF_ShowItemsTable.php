@@ -185,11 +185,7 @@
             echo "<td> " . $row[3] ."</td>";
             echo "<td> " . $row[4] ."</td>";
             echo "<td> " . $row[8] ."</td>";
-<<<<<<< Updated upstream
             echo "<td> <a href = 'http://localhost/T4/AF_ItemsDelete.php?id=$row[0]&active=N'> Delete </a></td>";
-=======
-            echo "<td> <a href = 'http://localhost/T4/de.php?id=$row[0]&active=N'> Delete </a></td>";
->>>>>>> Stashed changes
                 
             echo "</tr>"; 
         }
