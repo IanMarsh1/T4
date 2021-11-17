@@ -108,7 +108,11 @@
     <main>
 
     <?php
-    include ("../../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    include ("../../ErrorHandler.php");
+    Require ("../../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    $error_message = "";
+
+    #------- Initialize Variables ----------
 
     if(isset($_POST['itemName'])){
         $item_name = " " . $_POST['itemName'];
@@ -160,12 +164,14 @@
         $item_category = "";
     }
 
-    /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    #--------- Input Validation -----------
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (trim($item_name) == ""){
             $error_message = "Please enter a valid non blank name";
         }
-        elseif (trim($user_password) == "") {
+        elseif (trim($item_name) == "") {
             $error_message = "Please enter a valid password";
         }
         elseif (ctype_alnum($user_name) == FALSE){
@@ -180,11 +186,11 @@
         }
         
         }
-        */
-    
+        
+    #------- If passes run SQL ---------------
     
 
-    $q = "INSERT INTO T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
+   /* $q = "INSERT INTO T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
     VALUES ('$item_name', '$item_price', '$model_num', '$quantity_available', '$item_category')";       // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 
@@ -195,13 +201,22 @@
         echo "<br style='color:red';>" . mysqli_error( $dbc );
     }
 
+    */
+
 
     echo "<h2 style= color: blue ;text-align: center; font-size: 26px;> Insert into Items! </h2>";
 	
     
-    
+    #----------- Form ------------------
 
     echo "<form action ='". $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
+
+    echo $_POST['itemName'];
+    echo $_POST['itemPrice'];
+    echo $_POST['modelNum'];
+    echo $_POST['quantityAvailable'];
+    echo $_POST['itemCategory'];
+
 
     
     echo "<br><input type = 'text' name = 'itemName' value = ''> Name";
