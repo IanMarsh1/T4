@@ -142,7 +142,7 @@
             echo "  <option value='quantityAvailable'> Quantity </option>"; 
     echo "</select>";
 
-    echo " Sort <select name='sort'>";
+    echo " By <select name='sort'>";
             echo "  <option value='ASC'> ASC </option>";
             echo "  <option value='DESC'> DESC </option>";
     echo "</select>";

@@ -133,7 +133,7 @@
             echo "  <option value='supplierEmail'> Email </option>";  
     echo "</select>";
 
-    echo " Sort <select name='direct'>";
+    echo " By <select name='direct'>";
             echo "  <option value='ASC'> Ascending </option>";
             echo "  <option value='DESC'> Descending </option>";
     echo "</select>";
