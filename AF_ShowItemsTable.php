@@ -181,6 +181,7 @@
     echo "<th>Model Number</th>";
     echo "<th>Quantity Available</th>";
     echo "<th>Category</th>";
+    echo "<th>Delete</th>";
         
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error

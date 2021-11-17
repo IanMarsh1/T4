@@ -47,9 +47,7 @@ create table if not exists T4_Items (
 	itemPrice decimal not null default(0.00),
 	modelNum int unique,
 	quantityAvailable int default(0),
-	itemWeight decimal,
-	itemDimensions varchar(20),
-	description text default('N/A'),
+	--description text default('N/A'),
 	itemCategory enum('Clothing', 'Equipment', "Unsorted") not null default('Unsorted'),
 	active enum('Y','N') default ('Y') not null
 );

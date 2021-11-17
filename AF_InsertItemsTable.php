@@ -134,7 +134,7 @@
     else {
         $quantity_available = "";
     }
-    if(isset($_POST['itemWeight'])){
+     /* if(isset($_POST['itemWeight'])){     <--might use this might not
         $item_weight = " " . $_POST['itemWeight'];
     }
     else {
@@ -152,6 +152,7 @@
     else {
         $description = "";
     }
+    */
     if(isset($_POST['itemCategory'])){
         $item_category = " " . $_POST['itemCategory'];
     }
@@ -183,15 +184,19 @@
     
     
 
-    $q = "INSERT INTO T4_Items (itemName, itemPrice, modelNum, quantityAvailable, description, itemCategory) 
-    VALUES " . $item_name . ", " . $item_price . ", " .$model_num . ", " .$quantity_available . ", " . $description . ", " . $item_category;       // Calls to return the T4_Suppliers values from the table 
+    $q = "INSERT INTO T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
+    VALUES ('$item_name', '$item_price', '$model_num', '$quantity_available', '$item_category')";       // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 
-    
+    if ($r) {
+        echo "Everything got added in good";
+    }
+    else { 
+        echo "<br style='color:red';>" . mysqli_error( $dbc );
+    }
 
-    
-        
-    echo "<h2 style= color: blue ;text-align: center; font-size: 26px;> Insert into table! </h2>";
+
+    echo "<h2 style= color: blue ;text-align: center; font-size: 26px;> Insert into Items! </h2>";
 	
     
     
@@ -203,9 +208,9 @@
     echo "<br><input type = 'text' name = 'itemPrice' value = ''> Price";
     echo "<br><input type = 'text' name = 'modelNum' value = ''> Model Number";
     echo "<br><input type = 'text' name = 'quantityAvailable' value = ''> Quantity Available";
-    echo "<br><input type = 'text' name = 'itemWeight' value = ''> Item Weight";
-    echo "<br><input type = 'text' name = 'itemDiemnsions' value = ''> Item Dimensions";
-    echo "<br><input type = 'text' name = 'description' value = ''> Description";
+   // echo "<br><input type = 'text' name = 'itemWeight' value = ''> Item Weight";
+   // echo "<br><input type = 'text' name = 'itemDiemnsions' value = ''> Item Dimensions";
+   // echo "<br><input type = 'text' name = 'description' value = ''> Description";
     echo "<br><input type = 'text' name = 'itemCategory' value = ''> Category";
 
 
