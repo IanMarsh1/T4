@@ -25,20 +25,28 @@
             text-align: center;
             font-size: 30px;
         }
-
         a:link {
-            color:  white;
+            color: black;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
         }
 
         a:visited {
-            color: white;
+            color: black;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
         }
+
+        a:hover {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+
+        
 
         a:hover {
             color: black;
