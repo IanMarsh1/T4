@@ -31,13 +31,13 @@ create table if not exists T4_Users (
 
 -- Account made for Professor Tokash, as well as the three members of Group 4.
 insert into T4_Users (userID, username, fname, lname, password, lastPassChange, acctType, active) 
-values (1, "ATokash445", "ProfAPT0", "Andrew", "Tokash", current_timestamp(), "Admin", "Y");
+values (1, "ATokash445", "Andrew", "Tokash", "ProfAPT0", current_timestamp(), "Admin", "Y");
 insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
-values ("ALopez327", "admin002", "Antonio", "Lopez", current_timestamp(), "Admin", "Y", "2001-09-13");
+values ("ALopez327", "Antonio", "Lopez", "admin002", current_timestamp(), "Admin", "Y", "2001-09-13");
 insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
-values ("IMarsh254", "admin003", "Ian", "Marsh", current_timestamp(), "Admin", "Y", "2001-09-04");
+values ("IMarsh254", "Ian", "Marsh", "admin003", current_timestamp(), "Admin", "Y", "2001-09-04");
 insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
-values ("LPecovic119", "admin004", "Luke", "Pecovic", current_timestamp(), "Admin", "Y", "2002-09-13");
+values ("LPecovic119", "Luke", "Pecovic", "admin004", current_timestamp(), "Admin", "Y", "2002-09-13");
 
 
 -- Creates a table that will hold all necessary information for the products that we sell.

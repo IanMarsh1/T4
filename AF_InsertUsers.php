@@ -4,7 +4,7 @@
 	include "../ErrorHandler.php";
 	
 	$error_message = "";
-
+    /*
 	// Input Initialization Blocks of Code
 	
 
@@ -54,13 +54,17 @@
     }
     else { 
         echo "<br style='color:red';>" . mysqli_error( $dbc );
-    }
+    }*/
+    echo $_POST["username"];
+    echo $_POST["supplierID"];
+    echo $_POST["supplierID"];
 	
 	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	echo "<br> Enter ID number <input type = 'text' name = 'supplierID'>";		// Enter username and password here
+	echo "<br> Enter Username <input type = 'text' name = 'username'>";		
+    echo "<br> Enter Username <input type = 'text' name = 'username'>";	
 	echo "<br> Enter name of the company <input type = 'text' name = 'supplierName'>";
 	echo "<br> Enter email of the company <input type = 'text' name = 'supplierEmail'>";
-	echo "<br> <input type = 'submit' style='color:white; background-color:blue' value = 'Submit'>"; // Button to submit and refresh the page
+	echo "<br> <input type = 'submit' style='color:white; background-color:blue' value = 'Submit'>"; 
 	echo "</form>";
 
 	echo "<br> <a href= 'AF_ShowSuppliersTable.php'> Go Back </a>";
