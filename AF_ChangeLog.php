@@ -85,6 +85,20 @@
 
         <hr style="color:#053386;">
 
+        <!-- V1.2.0 -->
+        <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.2.0 - 11/21/2021 - Tables</strong></h3>
+
+        <ul style="font-size: 18px;">
+
+            <li>Display active records</li>
+            <li>Sort buttons</li>
+            <li>Add a new entry</li>
+            <li>Login/ Logout</li>
+
+        </ul>
+
+        <br>
+
         <!-- V1.1.0 -->
         <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.1.0 - 11/2/2021 - First Update</strong></h3>
 
