@@ -161,8 +161,8 @@
             echo "<tr>"; 
                 echo "<td> " . $row[0] ."</td>";
                 echo "<td> " . $row[1] ."</td>";
+                echo "<td> " . $row[2] ."</td>";
                 echo "<td> " . $row[3] ."</td>";
-                echo "<td> " . $row[4] ."</td>";
                 echo "<td> <a href = 'http://localhost/T4/AF_UserDelete.php?id=$row[0]&active=N'> Delete </a></td>";
             echo "</tr>"; 
         }

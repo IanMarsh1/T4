@@ -1,4 +1,77 @@
-<?php
+<!DOCTYPE html>
+<!-----------------------------------------------------------------------------------------------------------------
+--  AF_Construction.PHP (Original Program)
+--  ArcticFox Construction Page
+--  LastUpDate: 10/22/21
+--  This will show when a link is not yet working
+------------------------------------------------------------------------------------------------------------------>
+<html lang="en">
+
+
+<head>
+    <title>ArcticFox Construction Page</title>
+    <meta charset="UTF-8">
+
+    <!-- CSS -->
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h2 {
+            color: #dfe7d3;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:visited {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+
+        a:active {
+            color: black;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body style="background-color:#00a84c;">
+
+    <!-- Header -->
+    <header style="background-color:#dfe7d3;">
+        <a href= "Team4.php" ><h1 style="color: #053386;text-align: center; font-size: 38px;"> ArcticFox </h1></a>  <!-- Set the ArcticFox Header -->
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <?php
+		    include "AF_NavBar.php";
+        ?>
+    </nav>
+
+    <main>
+
+    <?php
 
 	require "../connect_db.php";
 	include "../ErrorHandler.php";
@@ -123,13 +196,21 @@
             $error_message="Enter your DOB!";
         }
 
+        if ($error_message == "") { 
+            $q = "Select username From T4_Users Where username = '$username'";
+            $r = mysqli_query ( $dbc , $q );    # this runs commands,
+            if (mysqli_num_rows($r) > 0) { 
+                $error_message = "Username is already used!";
+            }
+            
+        }
         
         if ($error_message == "") { 
             $q = "insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) values ( '$username', '$fname' , '$lname' , '$password' , current_timestamp(), '$acctType', '$active', '$DOB' )";
             $r = mysqli_query ( $dbc , $q );    # this runs commands, 
 
             if ($r){
-                echo "";
+                echo "The user $username was added!";
             }
             else {
                 $error_message = "There was a problem please try again.";
@@ -144,7 +225,7 @@
     
 	    echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
 	    echo "<br> Enter Username <input type = 'text' value = '" . $username ."' name = 'username'>";
-        echo "<br> Enter fname <input type = 'text' value = '" .$fname."' name = 'fname'>";
+        echo "<br> Enter fname  <input type = 'text' value = '" .$fname."' name = 'fname'>";
         echo "<br> Enter lname <input type = 'text' value = '" . $lname."' name = 'lname'>";	
         echo "<br> Enter password <input type = 'password' name = 'password'>";
 
@@ -162,10 +243,23 @@
         echo "</select>";
         echo "<br> Enter DOB <input type = 'date' name = 'DOB'>";
 	
-	    echo "<br> <input type = 'submit' style='color:white; background-color:blue' value = 'Submit'>"; 
+	    echo "<br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; 
 	    echo "</form>";
     
 
 	echo "<br> <a href= 'AF_ShowUserTable.php'> Go Back </a>";
 
-?>
+    ?>
+ 
+        
+    </main>
+
+    <!-- Footer -->
+    <?php
+        define("FILE_AUTHOR","Ian Marsh");
+        INCLUDE ("../T4/AF_Footer.php");
+    ?>
+
+</body>
+
+</html>

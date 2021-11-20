@@ -181,7 +181,7 @@
     echo "<th>Price</th>";
     echo "<th>Model Number</th>";
     echo "<th>Quantity Available</th>";
-    echo "<th>Category</th>";
+    //echo "<th>Category</th>";
     echo "<th>Delete</th>";
         
 
@@ -194,7 +194,7 @@
             echo "<td> " . $row[2] ."</td>";
             echo "<td> " . $row[3] ."</td>";
             echo "<td> " . $row[4] ."</td>";
-            echo "<td> " . $row[8] ."</td>";
+            //echo "<td> " . $row[8] ."</td>";
             echo "<td> <a href = 'http://localhost/T4/AF_ItemsDelete.php?id=$row[0]&active=N'> Delete </a></td>";
                 
             echo "</tr>"; 

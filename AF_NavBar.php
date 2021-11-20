@@ -1,5 +1,5 @@
 <?php
-include "../ErrorHandler.php";
+
 echo '<table border = 1; 
 
 style= "width:100%;
@@ -32,4 +32,3 @@ echo	'</tr>';
 		
 echo '</table>';
 	
-?>
