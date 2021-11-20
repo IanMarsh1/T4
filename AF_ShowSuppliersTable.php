@@ -107,6 +107,8 @@
     
     
     <main> 
+    <h2>Suppliers</h2>
+    <hr>
         
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)

@@ -118,6 +118,8 @@
 
 
     <main>
+    <h2>Items</h2>
+    <hr>
 
     <?php
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)

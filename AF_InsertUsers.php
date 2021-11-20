@@ -9,7 +9,7 @@
 
 
 <head>
-    <title>ArcticFox Construction Page</title>
+    <title>ArcticFox Add User Page</title>
     <meta charset="UTF-8">
 
     <!-- CSS -->
@@ -70,6 +70,8 @@
     </nav>
 
     <main>
+    <h2>Add New User</h2>
+    <hr>
 
     <?php
 
@@ -251,7 +253,9 @@
 
     ?>
  
-        
+ <hr>
+	<!-- Logo that we are using for this website -->
+    <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
     </main>
 
     <!-- Footer -->
