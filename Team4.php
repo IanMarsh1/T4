@@ -76,9 +76,12 @@
 	    <?php
 		include "../ErrorHandler.php";
 		
-		session_start();
+		
+
+
 		if(isset($_SESSION['login_status'])){
 			$login_status = $_SESSION['login_status'];
+            
 			if($login_status == "LOGGED IN"){
 				include "AF_NavBarLogged.php";
 			}else{

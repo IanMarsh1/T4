@@ -108,6 +108,7 @@
     <hr>
         
     <?php
+    session_start();
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
     if(isset($_POST['direct'])){

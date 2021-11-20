@@ -120,6 +120,14 @@
         $password = "";
     }
 
+    //password Check
+    if (isset($_POST['passwordCheck'])){
+        $passwordCheck = $_POST['passwordCheck'];
+    } 
+    else{
+        $passwordCheck = "";
+    }
+
     //acctType
     if (isset($_POST['acctType'])){
         $acctType = $_POST['acctType'];
@@ -136,7 +144,7 @@
         $active = "";
     }
 
-    //DOB
+    //DOB  
     if (isset($_POST['DOB'])){
         $DOB = $_POST['DOB'];
     } 
@@ -182,6 +190,9 @@
         elseif (ctype_graph($password) == FALSE){
             $error_message="Your password must be alphnumeric only!";
         }
+        elseif (trim($password) != trim($passwordCheck)){
+            $error_message="Your passwords must match!";
+        }
         
         //acctType
         elseif (trim($acctType) == "") {
@@ -197,28 +208,31 @@
         elseif (trim($DOB) == "") {
             $error_message="Enter your DOB!";
         }
+    }
 
-        if ($error_message == "") { 
-            $q = "Select username From T4_Users Where username = '$username'";
-            $r = mysqli_query ( $dbc , $q );    # this runs commands,
-            if (mysqli_num_rows($r) > 0) { 
-                $error_message = "Username is already used!";
-            }
-            
+    //Check to see if username is already used
+    if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
+        $q = "Select username From T4_Users Where username = '$username'";
+        $r = mysqli_query ( $dbc , $q );    # this runs commands,
+        if (mysqli_num_rows($r) > 0) { 
+            $error_message = "Username is already used!";
         }
+            
+    }
         
-        if ($error_message == "") { 
-            $q = "insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) values ( '$username', '$fname' , '$lname' , '$password' , current_timestamp(), '$acctType', '$active', '$DOB' )";
-            $r = mysqli_query ( $dbc , $q );    # this runs commands, 
+    //Add user
+    if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
+        $q = "insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) values ( '$username', '$fname' , '$lname' , '$password' , current_timestamp(), '$acctType', '$active', '$DOB' )";
+        $r = mysqli_query ( $dbc , $q );    # this runs commands, 
 
-            if ($r){
-                echo "The user $username was added!";
-            }
-            else {
-                $error_message = "There was a problem please try again.";
-            }
+        if ($r){
+            echo "The user $username was added!";
+        }
+        else {
+            $error_message = "There was a problem please try again.";
         }
     }
+    
 
     
     echo "<p style='color:red';>$error_message";
@@ -227,9 +241,10 @@
     
 	    echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
 	    echo "<br> Enter Username <input type = 'text' value = '" . $username ."' name = 'username'>";
-        echo "<br> Enter fname  <input type = 'text' value = '" .$fname."' name = 'fname'>";
-        echo "<br> Enter lname <input type = 'text' value = '" . $lname."' name = 'lname'>";	
+        echo "<br> Enter Your First Name  <input type = 'text' value = '" .$fname."' name = 'fname'>";
+        echo "<br> Enter Your Last Name <input type = 'text' value = '" . $lname."' name = 'lname'>";	
         echo "<br> Enter password <input type = 'password' name = 'password'>";
+        echo "<br> Enter password Again <input type = 'password' name = 'passwordCheck'>";
 
         //
         echo "<br> Acct Type <select name='acctType'>";

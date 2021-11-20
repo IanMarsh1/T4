@@ -145,7 +145,7 @@
 	$r = mysqli_query ( $dbc , $q );
 	
 	if ( $r ) {
-		echo "<br> The active field for user $id changed to $active";
+		echo "<h3> The active field for user $id changed to $active <br> <a href= 'AF_ShowUserTable.php'> Go Back </a> </H3>";
 	}else{
 		echo "<br>" . mysqli_error( $dbc ) . "</br>" ;
 	}
@@ -153,6 +153,10 @@
 	?>
 
 	</main>
+    <hr style="color:#053386;">
+        <br>
+        <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
+        <br> <!--img = cool-->
 
     <!--- This calls the footer file --->
     <?php

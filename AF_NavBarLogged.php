@@ -35,7 +35,6 @@
 
 */
 
-session_start();
 
 echo '<table border = 1; 
 
