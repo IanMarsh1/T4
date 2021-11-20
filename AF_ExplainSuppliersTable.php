@@ -152,6 +152,7 @@
 
     <!--- This calls the footer file --->
     <?php
+    include "../ErrorHandler.php";
     define("FILE_AUTHOR","Antonio Lopez");
     INCLUDE ("../T4/AF_Footer.php");
     ?>

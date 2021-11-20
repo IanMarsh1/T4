@@ -7,6 +7,7 @@
 
 
 <?php
+include "../ErrorHandler.php";
 define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
 echo "<footer style='background-color:#036933;'>";  
 echo '<small style="color:#dfe7d3";> Need Help? Send us an Email! <a herf=<a href="mailto:Ian.Marsh1@marist.edu, Luke.Pecovic1@marist.edu, antonio.lopez2@marist.edu" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">ArcticFox Support Team</a>';

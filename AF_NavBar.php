@@ -1,40 +1,5 @@
 <?php
-
-/*
-				  #IN-LINE CSS#
-		th{
-			background-color:#036933;
-		}
-		
-		a:link {
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        a:visited {
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        a:link {
-            color: #dfe7d3;
-            background-color: transparent;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        a:visited {
-            color: #dfe7d3;
-            background-color: transparent;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-*/
-
+include "../ErrorHandler.php";
 echo '<table border = 1; 
 
 style= "width:100%;

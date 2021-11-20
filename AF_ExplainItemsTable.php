@@ -158,6 +158,7 @@
 
     <!--- This calls the footer file --->
     <?php
+    include "../ErrorHandler.php";
     define("FILE_AUTHOR","Luke Pecovic");
     INCLUDE ("../T4/AF_Footer.php");
     ?>

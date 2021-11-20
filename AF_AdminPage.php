@@ -76,6 +76,7 @@
     <!-- NAV -->
     <nav>
         <?php
+        include "../ErrorHandler.php";
         include "AF_NavBar.php";
         ?>
     </nav>
