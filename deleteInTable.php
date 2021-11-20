@@ -30,5 +30,7 @@
 	}else{
 		echo "<br>" . mysqli_error( $dbc ) . "</br>" ;
 	}
+	
+	echo "<br> <a href= 'AF_ShowSuppliersTable.php'> Go Back </a>";
 
 ?>

@@ -62,7 +62,7 @@ echo		'<tr>';
 echo        '<th style = "background-color:#036933";><a href="AF_ShowItemsTable.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Items</a></th>';
 echo        '<th style = "background-color:#036933";><a href="AF_ShowSuppliersTable.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Suppliers</a></th>';
 echo        '<th style = "background-color:#036933";><a href="AF_ShowUserTable.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Users</a></th>';
-echo        '<th style = "background-color:#036933";><a href="AF_LoginPage.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Employee Login</a></th>';
+echo        '<th style = "background-color:#036933";><a href="AF_Logout.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Logout</a></th>';
 echo        '<th style = "background-color:#036933";><a href="AF_AdminPage.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Admin Page</a></th>';
 echo        '<th style = "background-color:#036933";><div class="topnav" text-align: center;><input type="text" placeholder="Search.."></div></th>';
 echo	'</tr>';
