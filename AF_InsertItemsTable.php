@@ -246,12 +246,12 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     
-    echo "<br>Name <input type = 'text' name = 'itemName' value = '" . $item_name ."'> ";
-    echo "<br>Price <input type = 'number' name = 'itemPrice' value = '" . $item_price ."'> ";
-    echo "<br>Model Number <input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
-    echo "<br>Quantity Available <input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
+    echo "<br>Name* <input type = 'text' name = 'itemName' value = '" . $item_name ."'> ";
+    echo "<br>Price* <input type = 'number' name = 'itemPrice' value = '" . $item_price ."'> ";
+    echo "<br>Model Number* <input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
+    echo "<br>Quantity Available* <input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
 
-    echo "<br> Category <select name='itemCategory'>  ";
+    echo "<br> Category* <select name='itemCategory'>  ";
         echo "  <option value='Equipment'> Equipment </option>"; 
         echo "  <option value='Clothing'> Clothing </option>";
         echo "  <option value='Unsorted'> Unsorted </option>";
