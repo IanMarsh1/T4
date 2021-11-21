@@ -177,14 +177,8 @@
         elseif (is_numeric($quantity_available) == FALSE) {
             $error_message = "Please enter a valid quantity";
         }
-        //item category 
-        elseif (trim($item_category) == "") {
-            $error_message = "Please enter a valid quantity";
-        }
+        //item category is a select
         
-        elseif (ctype_alnum($item_category) == FALSE){
-            $error_message = "Alphanumerics only!";
-        }
     
         
         
@@ -194,18 +188,18 @@
     #***** THIS NEEDS TO BE CHECKED TO SEE IF THERE IS ANY ERRORS 
     #***** RIGHT NOW YOU YOU RUN ON THE FIRST GO LOOK AT INSERT USERS 
     
-
+if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
    $q = "INSERT INTO t4_items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
     VALUES ('$item_name', '$item_price', '$model_num', '$quantity_available', '$item_category')";       // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 
     if ($r) {
-        echo "Everything got added in good";
+        echo "$item_name added into Items Table!";
     }
     else { 
         echo "<br style='color:red';>" . mysqli_error( $dbc );
     }
-
+}
     
 
 
@@ -221,11 +215,16 @@
 
 
     
-    echo "<br><input type = 'text' name = 'itemName' value = '" . $item_name ."'> Name";
-    echo "<br><input type = 'number' name = 'itemPrice' value = '" . $item_price ."'> Price";
-    echo "<br><input type = 'number' name = 'modelNum' value = '" . $model_num ."'> Model Number";
-    echo "<br><input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> Quantity Available";
-    echo "<br><input type = 'text' name = 'itemCategory' value = '" . $item_category ."'> Category"; #Make this a sort (look at Users)
+    echo "<br>Name <input type = 'text' name = 'itemName' value = '" . $item_name ."'> ";
+    echo "<br>Price <input type = 'number' name = 'itemPrice' value = '" . $item_price ."'> ";
+    echo "<br>Model Number <input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
+    echo "<br>Quantity Available <input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
+
+    echo "<br> Category <select name='itemCatgeory'>  ";
+        echo "  <option value='Equipment'> Equipment </option>"; 
+        echo "  <option value='Clothing'> Clothing </option>";
+        echo "  <option value='Unsorted'> Unsorted </option>";
+    echo "</select>";
 
 
     
