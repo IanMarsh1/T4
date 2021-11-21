@@ -108,8 +108,9 @@
     <main>
 
     <?php
-    include ("../../ErrorHandler.php");
-    Require ("../../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    
+    include ("../ErrorHandler.php");
+    Require ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
     $error_message = "";
     echo $error_message;
 
@@ -147,6 +148,7 @@
     }
 
     #--------- Input Validation -----------
+    
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
