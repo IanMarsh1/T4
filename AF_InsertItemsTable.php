@@ -160,6 +160,9 @@
         elseif (ctype_alnum($item_name) == FALSE){
             $error_message = "Item Name must be alphanumerics only!";
         }
+        elseif (strlen($item_name) > 30) {
+            $error_message = "Item Name must be less than 30 characters!";
+        }
 
         //item price
         elseif (is_numeric($item_price) == FALSE) {
@@ -169,13 +172,22 @@
             $error_message = "Please enter a valid non blank name";
             
         }
+        elseif (strlen($item_price) > 30) {
+            $error_message = "Item price must be less than 30 characters!";
+        }
         //model num
         elseif (is_numeric($model_num) == FALSE) {
             $error_message = "Please enter a valid model num";
         }
+        elseif (strlen($model_num) > 30) {
+            $error_message = "Model Number must be less than 30 characters!";
+        }
         //quantity available
         elseif (is_numeric($quantity_available) == FALSE) {
             $error_message = "Please enter a valid quantity";
+        }
+        elseif (strlen($quantity_available) > 30) {
+            $error_message = "Quantity must be less than 30 characters!";
         }
         //item category is a select
         
