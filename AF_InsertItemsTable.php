@@ -117,31 +117,31 @@
     #------- Initialize Variables ----------
 
     if(isset($_POST['itemName'])){
-        $item_name = " " . $_POST['itemName'];
+        $item_name = $_POST['itemName'];
     }
     else {
         $item_name = "";
     }
     if(isset($_POST['itemPrice'])){
-        $item_price = " " . $_POST['itemPrice'];
+        $item_price = $_POST['itemPrice'];
     }
     else {
         $item_price = "";
     }
     if(isset($_POST['modelNum'])){
-        $model_num = " " . $_POST['modelNum'];
+        $model_num = $_POST['modelNum'];
     }
     else {
         $model_num = "";
     }
     if(isset($_POST['quantityAvailable'])){
-        $quantity_available = " " . $_POST['quantityAvailable'];
+        $quantity_available = $_POST['quantityAvailable'];
     }
     else {
         $quantity_available = "";
     }
     if(isset($_POST['itemCategory'])){
-        $item_category = " " . $_POST['itemCategory'];
+        $item_category = $_POST['itemCategory'];
     }
     else {
         $item_category = "";
@@ -158,7 +158,7 @@
             
         }
         elseif (ctype_alnum($item_name) == FALSE){
-            $error_message = "Alphanumerics only!";
+            $error_message = "Item Name must be alphanumerics only!";
         }
 
         //item price
@@ -225,7 +225,7 @@
     echo "<br><input type = 'number' name = 'itemPrice' value = '" . $item_price ."'> Price";
     echo "<br><input type = 'number' name = 'modelNum' value = '" . $model_num ."'> Model Number";
     echo "<br><input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> Quantity Available";
-    echo "<br><input type = 'text' name = 'itemCategory' value = '" . $item_category ."'> Category";
+    echo "<br><input type = 'text' name = 'itemCategory' value = '" . $item_category ."'> Category"; #Make this a sort (look at Users)
 
 
     
