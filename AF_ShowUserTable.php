@@ -175,7 +175,7 @@
     }
     echo "</tr>";
     echo "</Table>";
-    echo "<p style = 'color: black; text-align: center;'><a href = 'AF_InsertUsers.php'> Add a new user! </a>"
+    echo "<p style = 'color: black; text-align: center;'><a href = 'AF_InsertUsers.php'> Want to Add a New User? Click Here! </a>"
     
     ?>
     <br>
