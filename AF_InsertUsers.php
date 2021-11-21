@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  AF_Construction.PHP (Original Program)
---  ArcticFox Construction Page
+--  AF_InsertUsers.php (Original Program) 
+--  ArcticFox Insert Users
 --  LastUpDate: 10/22/21
---  This will show when a link is not yet working
+--  Add new users to the site
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 

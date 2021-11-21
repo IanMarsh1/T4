@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  AF_UserTable.PHP (Original Program)
---  ArcticFox Home Page
+--  AF_SuppliersTable.PHP (Original Program)
+--  ArcticFox suppliers Page
 --  LastUpDate: 11/1/21
 --  This will show our Suppliers table 
 ------------------------------------------------------------------------------------------------------------------>

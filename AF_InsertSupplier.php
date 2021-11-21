@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  AF_Construction.PHP (Original Program)
---  ArcticFox Construction Page
---  LastUpDate: 10/22/21
---  This will show when a link is not yet working
+--  AF_InsertSupplier.php(Original Program)
+--  ArcticFox Insert Supplier
+--  LastUpDate: 11/21/21
+--  Add a new supplier
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
@@ -134,7 +134,7 @@
 		elseif(($supplierPhoneNumber) == ""){
 			$supplierPhoneNumber = "N/A";
 		}
-		elseif(($address) == ""){
+		elseif(($supplierPhoneNumber) == ""){
 			$address = "N/A";
 		}
 		
@@ -156,7 +156,7 @@
 		$r = mysqli_query ( $dbc , $q );
 		
 		if ($r) {
-			echo "<h3> The active field for suppliers $id changed to $active <br>";
+			echo "Supplier $supplierName was added!";
 		}
 		else { 
 			echo "<br style='color:red';>" . mysqli_error( $dbc );

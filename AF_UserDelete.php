@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  AF_IteamsTable.PHP (Original Program)
---  ArcticFox Items Table
+--  AF_UserDelete.PHP (Original Program)
+--  ArcticFox User Delete page
 --  LastUpDate: 11/1/21
---  This will show our items table 
+--  Will remove a user
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 

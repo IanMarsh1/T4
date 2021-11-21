@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  AF_Construction.PHP (Original Program)
---  ArcticFox Construction Page
---  LastUpDate: 10/22/21
---  This will show when a link is not yet working
+--  AF_LoginPage.PHP (Original Program)
+--  ArcticFox Login Page
+--  LastUpDate: 11/21/21
+--  Login to the site
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 

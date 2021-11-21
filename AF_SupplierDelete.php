@@ -9,10 +9,10 @@
 
 <!DOCTYPE html>
 <!-----------------------------------------------------------------------------------------------------------------
---  AF_IteamsTable.PHP (Original Program)
---  ArcticFox Items Table
+--  AF_SupplierDelete.php (Original Program) 
+--  ArcticFox Supplier Delete Page
 --  LastUpDate: 11/1/21
---  This will show our items table 
+--  Will remove a supplier
 ------------------------------------------------------------------------------------------------------------------>
 <html lang="en">
 
