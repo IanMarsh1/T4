@@ -173,7 +173,7 @@
     echo "</Table>";
 	
 	
-	echo "<br> <a href= 'addInTable.php'> Want to Add a Company? Click Here </a>";
+	echo "<br> <a href= 'AF_InsertSupplier.php'> Want to Add a Company? Click Here </a>";
 	
     
     ?>

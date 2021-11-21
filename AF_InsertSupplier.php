@@ -9,7 +9,7 @@
 
 
 <head>
-    <title>ArcticFox Add User Page</title>
+    <title>ArcticFox Add Supplier Page</title>
     <meta charset="UTF-8">
 
     <!-- CSS -->
@@ -70,7 +70,7 @@
     </nav>
 
     <main>
-    <h2>Add New User</h2>
+    <h2>Add New Supplier</h2>
     <hr>
 
 
@@ -146,7 +146,7 @@
 	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
 	echo "<br> Enter ID number <input type = 'text' name = 'supplierID'>";		// Enter username and password here
 	echo "<br> Enter name of the company <input type = 'text' name = 'supplierName'>";
-	echo "<br> Enter email of the company <input type = 'email' name = 'supplierEmail'>";
+	echo "<br> Enter email of the company <input type = 'text' name = 'supplierEmail'>";
 	echo "<br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page
 	echo "</form>";
 
