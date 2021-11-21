@@ -163,12 +163,19 @@
         elseif (is_numeric($item_price) == FALSE) {
             $error_message = "Please enter a valid price";
         }
+        elseif (trim($item_price) == ""){
+            $error_message = "Please enter a valid non blank name";
+            
+        }
+        //model num
         elseif (is_numeric($model_num) == FALSE) {
             $error_message = "Please enter a valid model num";
         }
+        //quantity available
         elseif (is_numeric($quantity_available) == FALSE) {
             $error_message = "Please enter a valid quantity";
         }
+        //item category 
         elseif (trim($item_category) == "") {
             $error_message = "Please enter a valid quantity";
         }
