@@ -162,7 +162,7 @@
             echo "<td> " . $row[1] ."</td>";
             echo "<td> " . $row[2] ."</td>";
             echo "<td> " . $row[3] ."</td>";
-            echo "<td> <a href = 'http://localhost/T4/deleteInTable.php?id=$row[0]&active=N'> Delete </a></td>";
+            echo "<td> <a href = 'http://localhost/T4/AF_SupplierDelete.php?id=$row[0]&active=N'> Delete </a></td>";
             echo "</tr>"; 
         }
     }
@@ -173,7 +173,7 @@
     echo "</Table>";
 	
 	
-	echo "<br> <a href= 'AF_InsertSupplier.php'> Want to Add a Company? Click Here </a>";
+	echo "<br> <a href= 'AF_InsertSupplier.php' Style = 'text-align: center;'> Want to Add a Company? Click Here </a>";
 	
     
     ?>
