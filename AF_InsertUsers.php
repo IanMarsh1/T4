@@ -247,7 +247,7 @@
         echo "<br> Enter password Again* <input type = 'password' name = 'passwordCheck'>";
 
         //
-        echo "<br> Acct Type* <select name='acctType'>";
+        echo "<br> Account Type* <select name='acctType'>";
             echo "  <option value='Shareholder'> Shareholder </option>"; 
             echo "  <option value='Employee'> Employee </option>";
             echo "  <option value='Admin'> Admin </option>";
