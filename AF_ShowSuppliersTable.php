@@ -100,7 +100,6 @@
 	
     <nav>
         <?php
-            include "../ErrorHandler.php";
 		    include "AF_NavBar.php";
         ?>
     </nav>
@@ -111,6 +110,7 @@
     <hr>
         
     <?php
+    include "../ErrorHandler.php";
     REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
 
 	if(isset($_POST['sort'])){
@@ -151,6 +151,7 @@
     echo "<th>Supplier ID</th>";
     echo "<th>Supplier Name</th>";
     echo "<th>Email</th>";
+    echo "<th>Phone #</th>";
     echo "<th>Delete</th>";
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
@@ -160,6 +161,7 @@
             echo "<td> " . $row[0] ."</td>";
             echo "<td> " . $row[1] ."</td>";
             echo "<td> " . $row[2] ."</td>";
+            echo "<td> " . $row[3] ."</td>";
             echo "<td> <a href = 'http://localhost/T4/deleteInTable.php?id=$row[0]&active=N'> Delete </a></td>";
             echo "</tr>"; 
         }
