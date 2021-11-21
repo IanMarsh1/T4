@@ -233,7 +233,7 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
         echo mysqli_error( $dbc ) ;
     }
 }
-echo $q;
+
     
 
 
