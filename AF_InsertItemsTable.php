@@ -190,7 +190,9 @@
         
         }
         
-    #------- If passes run SQL ---------------
+    #------- If passes run SQL --------------- 
+    #***** THIS NEEDS TO BE CHECKED TO SEE IF THERE IS ANY ERRORS 
+    #***** RIGHT NOW YOU YOU RUN ON THE FIRST GO LOOK AT INSERT USERS 
     
 
    $q = "INSERT INTO t4_items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
