@@ -35,7 +35,7 @@
         a:visited {
             color: black;
             background-color: transparent;
-            text-decoration: none;
+            text-decoration: underline;
             font-size: 18px;
         }
 
@@ -264,7 +264,7 @@
 	    echo "</form>";
     
 
-	echo "<br> <a href= 'AF_ShowUserTable.php'> Go Back </a>";
+	echo "<br> <a href= 'AF_ShowUserTable.php' Style = 'text-decoration: underline;'> Go Back </a>";
 
     ?>
  
