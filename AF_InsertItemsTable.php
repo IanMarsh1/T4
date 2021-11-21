@@ -27,14 +27,14 @@
         }
 
         a:link {
-            color:  white;
+            color:  black;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
         }
 
         a:visited {
-            color: white;
+            color: black;
             background-color: transparent;
             text-decoration: none;
             font-size: 18px;
@@ -106,6 +106,8 @@
 
 
     <main>
+    <h2> Insert into Items! </h2>
+    <hr>
 
     <?php
     
@@ -196,9 +198,6 @@
         
         }
         
-    #------- If passes run SQL --------------- 
-    #***** THIS NEEDS TO BE CHECKED TO SEE IF THERE IS ANY ERRORS 
-    #***** RIGHT NOW YOU YOU RUN ON THE FIRST GO LOOK AT INSERT USERS
 
     #------ Check to see if item is already used -------
     
@@ -234,10 +233,8 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
 
+
     
-
-
-    echo "<h2 style= color: blue ;text-align: center; font-size: 26px;> Insert into Items! </h2>";
     echo "<p style='color:red';>$error_message";
 	
     
