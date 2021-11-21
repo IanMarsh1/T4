@@ -186,7 +186,18 @@
         
     #------- If passes run SQL --------------- 
     #***** THIS NEEDS TO BE CHECKED TO SEE IF THERE IS ANY ERRORS 
-    #***** RIGHT NOW YOU YOU RUN ON THE FIRST GO LOOK AT INSERT USERS 
+    #***** RIGHT NOW YOU YOU RUN ON THE FIRST GO LOOK AT INSERT USERS
+
+    #------ Check to see if item is already used -------
+    
+    if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
+        $q = "Select itemName From t4_items Where itemName = '$item_name'";
+        $r = mysqli_query ( $dbc , $q );    # this runs commands,
+        if (mysqli_num_rows($r) > 0) { 
+            $error_message = "Item Name is already used!";
+        }
+            
+    }
     
 if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
    $q = "INSERT INTO t4_items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
@@ -194,10 +205,11 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 
     if ($r) {
-        echo "$item_name added into Items Table!";
+        echo "Item $item_name added into Items Table!";
     }
     else { 
-        echo "<br style='color:red';>" . mysqli_error( $dbc );
+        echo $error_message = "There was a problem, Please try again!";
+        echo mysqli_error( $dbc ) ;
     }
 }
     
