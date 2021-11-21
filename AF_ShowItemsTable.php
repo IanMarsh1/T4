@@ -208,6 +208,8 @@
     echo "</tr>";
     echo "</Table>";
 
+    echo "<p style = 'color: black; text-align: center;'> <a href= 'AF_InsertItemsTable.php'> Want to Add an Item? Click Here </a>";
+
     
     
     ?>
