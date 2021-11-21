@@ -198,6 +198,15 @@
         }
             
     }
+    #-------- Check to see if model num is already used-------
+    if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
+        $q = "Select modelNum From t4_items Where modelNum = '$model_num'";
+        $r = mysqli_query ( $dbc , $q );    # this runs commands,
+        if (mysqli_num_rows($r) > 0) { 
+            $error_message = "Model Number is already used!";
+        }
+            
+    }
     
 if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
    $q = "INSERT INTO t4_items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
