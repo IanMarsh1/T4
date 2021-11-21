@@ -81,17 +81,21 @@
 	
 	$error_message = "";
 
-	// Input Initialization Blocks of Code
-	if (isset($_POST['supplierID'])){
-		$supplierID = $_POST['supplierID'];	
-	}
-	
+	// Input Initialization Blocks of Code	
 	if(isset($_POST['supplierName'])){
 		$supplierName = $_POST['supplierName'];
 	}
 	
 	if(isset($_POST['supplierEmail'])){
 		$supplierEmail = $_POST['supplierEmail'];
+	}
+	
+	if(isset($_POST['supplierPhoneNumber'])){
+		$supplierPhoneNumber = $_POST['supplierPhoneNumber'];
+	}
+	
+	if(isset($_POST['address'])){
+		$address = $_POST['address'];
 	}
 	
 
@@ -117,7 +121,8 @@
 		}
 		
 		if ($error_message == "") {		// Checks if supplier name/email matches one in the database
-			$q = "SELECT * FROM t4_suppliers WHERE supplierID='$supplierID' AND supplierName='$supplierName' AND supplierEmail='$supplierEmail'";
+			$q = "SELECT * FROM t4_suppliers WHERE supplierName='$supplierName' AND supplierEmail='$supplierEmail' AND 
+			supplierPhoneNumber='$supplierPhoneNumber' AND address='$address'";
 			$r = mysqli_query ( $dbc , $q );    
 			
 			if ($r){
@@ -131,22 +136,25 @@
 		}
 		
 	}
-	
-
-	$q = "INSERT INTO t4_suppliers (supplierID, supplierName, supplierEmail) VALUES ('$supplierID', '$supplierName', '$supplierEmail')";
-	$r = mysqli_query ( $dbc , $q );
-	
-	if ($r) {
-        echo "Everything got added in good";
-    }
-    else { 
-        echo "<br style='color:red';>" . mysqli_error( $dbc );
-    }
+	if(isset($supplierName) & isset($supplierEmail) & isset($supplierPhoneNumber) & isset($address)){
+		$q = "INSERT INTO t4_suppliers (supplierName, supplierEmail, supplierPhoneNumber, address) 
+		VALUES ('$supplierName', '$supplierEmail', '$supplierPhoneNumber', '$address')";
+		$r = mysqli_query ( $dbc , $q );
+		
+		if ($r) {
+			echo "Everything got added in good";
+		}
+		else { 
+			echo "<br style='color:red';>" . mysqli_error( $dbc );
+		}
+	}
 	
 	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	echo "<br> Enter ID number <input type = 'text' name = 'supplierID'>";		// Enter username and password here
 	echo "<br> Enter name of the company <input type = 'text' name = 'supplierName'>";
 	echo "<br> Enter email of the company <input type = 'text' name = 'supplierEmail'>";
+	echo "<br> Enter the phone address of the company <input type='tel' name='supplierPhoneNumber' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>";
+	echo "<small><br>Format: 123-456-7890</small>";
+	echo "<br> Enter the address of the company <input type = 'text' name = 'address'>";
 	echo "<br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page
 	echo "</form>";
 
