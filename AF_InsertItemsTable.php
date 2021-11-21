@@ -212,6 +212,7 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
         echo mysqli_error( $dbc ) ;
     }
 }
+echo $q;
     
 
 
@@ -232,7 +233,7 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
     echo "<br>Model Number <input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
     echo "<br>Quantity Available <input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
 
-    echo "<br> Category <select name='itemCatgeory'>  ";
+    echo "<br> Category <select name='itemCategory'>  ";
         echo "  <option value='Equipment'> Equipment </option>"; 
         echo "  <option value='Clothing'> Clothing </option>";
         echo "  <option value='Unsorted'> Unsorted </option>";
