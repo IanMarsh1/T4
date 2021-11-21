@@ -85,18 +85,30 @@
 	if(isset($_POST['supplierName'])){
 		$supplierName = $_POST['supplierName'];
 	}
+	else{
+        $supplierName = "";
+    }
 	
 	if(isset($_POST['supplierEmail'])){
 		$supplierEmail = $_POST['supplierEmail'];
 	}
+	else{
+        $supplierEmail = "";
+    }
 	
 	if(isset($_POST['supplierPhoneNumber'])){
 		$supplierPhoneNumber = $_POST['supplierPhoneNumber'];
 	}
+	else{
+        $supplierPhoneNumber = "";
+    }
 	
 	if(isset($_POST['address'])){
 		$address = $_POST['address'];
 	}
+	else{
+        $address = "";
+    }
 	
 
 	// Input Validation Blocks of Code											
@@ -104,61 +116,64 @@
 		if ( trim($supplierName) == "") {		
 			$error_message=" <p style='color:red';> Enter the supplier name! </p>";
 		}
-		elseif(strlen($supplierName) <= 30){
+		elseif(strlen($supplierName) >= 30){
 			$error_message=" <p style='color:red';> Supplier Name has max of 30 characters! </p>";
 		}
 		elseif ( ctype_alnum($supplierName) == FALSE ) {
 			$error_message=" <p style='color:red';>Supplier Name must be alphnumeric only!</p>";
 		}
-		elseif ( trim($supplierEmail) == ""  ) {
+		elseif ( trim($supplierEmail) == "") {
 			$error_message=" <p style='color:red';> Enter the supplier email! </p>";
 		}
-		elseif(strlen($supplierEmail) <= 30){
+		elseif(strlen($supplierEmail) >= 30){
 			$error_message=" <p style='color:red';> Supplier Email has max of 30 characters! </p>";
 		}
 		elseif (!filter_var($supplierEmail, FILTER_VALIDATE_EMAIL)) {
 			$error_message=" <p style='color:red';>Please enter an actual email!</p>";
+		} 
+		elseif(($supplierPhoneNumber) == ""){
+			$supplierPhoneNumber = "N/A";
+		}
+		elseif(($address) == ""){
+			$address = "N/A";
 		}
 		
 		if ($error_message == "") {		// Checks if supplier name/email matches one in the database
-			$q = "SELECT * FROM t4_suppliers WHERE supplierName='$supplierName' AND supplierEmail='$supplierEmail' AND 
-			supplierPhoneNumber='$supplierPhoneNumber' AND address='$address'";
+			$q = "SELECT * FROM t4_suppliers WHERE supplierName='$supplierName'";
 			$r = mysqli_query ( $dbc , $q );    
 			
-			if ($r){
-				if (mysqli_num_rows($r) == 0) { 
-					$error_message = "<p style='color:red';> Invalid supplier name/email combination. </p>";
-				}
+			
+			if (mysqli_num_rows($r) > 0) { 
+				$error_message = "<p style='color:red';> Supplier name used. </p>";
 			}
-			else {
-				$error_message = "<p style='color:red';>Invalid supplier name/email combination.</p>";
-			}
+			
 		}
 		
 	}
-	if(isset($supplierName) & isset($supplierEmail) & isset($supplierPhoneNumber) & isset($address)){
+	if($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST"){
 		$q = "INSERT INTO t4_suppliers (supplierName, supplierEmail, supplierPhoneNumber, address) 
 		VALUES ('$supplierName', '$supplierEmail', '$supplierPhoneNumber', '$address')";
 		$r = mysqli_query ( $dbc , $q );
 		
 		if ($r) {
-			echo "Everything got added in good";
+			echo "<h3> The active field for suppliers $id changed to $active <br>";
 		}
 		else { 
 			echo "<br style='color:red';>" . mysqli_error( $dbc );
 		}
 	}
+	echo $error_message;
 	
 	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	echo "<br> Enter name of the company <input type = 'text' name = 'supplierName'>";
-	echo "<br> Enter email of the company <input type = 'text' name = 'supplierEmail'>";
-	echo "<br> Enter the phone address of the company <input type='tel' name='supplierPhoneNumber' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>";
-	echo "<small><br>Format: 123-456-7890</small>";
-	echo "<br> Enter the address of the company <input type = 'text' name = 'address'>";
+	echo "<br> Enter name of the company* <input type = 'text' value = '" . $supplierName ."' name = 'supplierName'>";
+	echo "<br> Enter email of the company* <input type = 'email' value = '" . $supplierEmail ."' name = 'supplierEmail'>";
+	echo "<br> Enter the phone # of the company <input type='tel' value = '" . $supplierPhoneNumber ."' name='supplierPhoneNumber' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>";
+	echo "<small> ex: 123-456-7890</small>";
+	echo "<br> Enter the address of the company <input type = 'text' value = '" . $address ."' name = 'address'>";
 	echo "<br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page
 	echo "</form>";
 
-	echo "<br> <a href= 'AF_ShowSuppliersTable.php'> Go Back </a>";
+	echo "<br> <a href= 'AF_ShowSuppliersTable.php' > Go Back </a>";
 
 ?>
 

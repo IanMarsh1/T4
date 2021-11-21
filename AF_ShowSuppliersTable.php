@@ -173,7 +173,7 @@
     echo "</Table>";
 	
 	
-	echo "<br> <a href= 'AF_InsertSupplier.php' Style = 'text-align: center;'> Want to Add a Company? Click Here </a>";
+	echo "<p style = 'color: black; text-align: center;'> <a href= 'AF_InsertSupplier.php'> Want to Add a Company? Click Here </a>";
 	
     
     ?>

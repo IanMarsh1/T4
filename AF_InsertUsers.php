@@ -240,25 +240,25 @@
     # ------ Display Form --------
     
 	    echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	    echo "<br> Enter Username <input type = 'text' value = '" . $username ."' name = 'username'>";
-        echo "<br> Enter Your First Name  <input type = 'text' value = '" .$fname."' name = 'fname'>";
-        echo "<br> Enter Your Last Name <input type = 'text' value = '" . $lname."' name = 'lname'>";	
-        echo "<br> Enter password <input type = 'password' name = 'password'>";
-        echo "<br> Enter password Again <input type = 'password' name = 'passwordCheck'>";
+	    echo "<br> Enter Username* <input type = 'text' value = '" . $username ."' name = 'username'>";
+        echo "<br> Enter Your First Name*  <input type = 'text' value = '" .$fname."' name = 'fname'>";
+        echo "<br> Enter Your Last Name* <input type = 'text' value = '" . $lname."' name = 'lname'>";	
+        echo "<br> Enter password* <input type = 'password' name = 'password'>";
+        echo "<br> Enter password Again* <input type = 'password' name = 'passwordCheck'>";
 
         //
-        echo "<br> Acct Type <select name='acctType'>";
+        echo "<br> Acct Type* <select name='acctType'>";
             echo "  <option value='Shareholder'> Shareholder </option>"; 
             echo "  <option value='Employee'> Employee </option>";
             echo "  <option value='Admin'> Admin </option>";
         echo "</select>";
 
         //
-        echo "<br> Account active <select name='active'>";
+        echo "<br> Account active* <select name='active'>";
             echo "  <option value='Y'> Yes </option>";
             echo "  <option value='N'> No </option>";
         echo "</select>";
-        echo "<br> Enter DOB <input type = 'date' name = 'DOB'>";
+        echo "<br> Enter DOB* <input type = 'date' name = 'DOB'>";
 	
 	    echo "<br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; 
 	    echo "</form>";
