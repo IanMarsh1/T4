@@ -126,15 +126,24 @@
 
 	if (isset($_GET["id"])){
 		$id = $_GET["id"];
-	}else{
+	}
+    else{
 		echo "<br> No ID specified";
+		die;
+	}
+    if (isset($_GET["name"])){
+		$name = $_GET["name"];
+	}
+    else{
+		echo "<br> No name specified";
 		die;
 	}
 
 	
 	if (isset($_GET["active"])){
 		$active = $_GET["active"];
-	}else{
+	}
+    else{
 		echo "<br> No Active specified";
 		die;
 	}
@@ -144,7 +153,7 @@
 	$r = mysqli_query ( $dbc , $q );
 	
 	if ( $r ) {
-		echo "<h3> The active field for item $id changed to $active <br> <a href= 'AF_ShowItemsTable.php'> Go Back </a> </H3>";
+		echo "<h3> The item $name was deleted <br> <a href= 'AF_ShowItemsTable.php'> Go Back </a> </H3>";
 	}else{
 		echo "<br>" . mysqli_error( $dbc ) . "</br>" ;
 	}
