@@ -197,7 +197,7 @@
             echo "<td> " . $row[3] ."</td>";
             echo "<td> " . $row[4] ."</td>";
             echo "<td> " . $row[5] ."</td>";
-            echo "<td> <a href = 'http://localhost/T4/AF_ItemsDelete.php?id=$row[0]&active=N'> Delete </a></td>";
+            echo "<td> <a href = 'http://localhost/T4/AF_ItemsDelete.php?id=$row[0]&active=N&name=$row[1]'> Delete </a></td>";
                 
             echo "</tr>"; 
         }
