@@ -87,6 +87,10 @@
             font-size: 25px;
             background-color:#df5b52;
         }
+        p{
+            font-size: 18px;
+            font-family: Arial;
+        }
     </style>
 </head>
 
@@ -246,16 +250,21 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     
-    echo "<br>Name* <input type = 'text' name = 'itemName' value = '" . $item_name ."'> ";
-    echo "<br>Price* <input type = 'number' max = '99999.99' min = '0' step = '.01' name = 'itemPrice' value = '" . $item_price ."'> ";
-    echo "<br>Model Number* <input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
-    echo "<br>Quantity Available* <input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
+    echo "<p>Name* <br><input type = 'text' name = 'itemName' value = '" . $item_name ."'> ";
+    echo '<br>';
+    echo "<br>Price* <br><input type = 'number' max = '99999.99' min = '0' step = '.01' name = 'itemPrice' value = '" . $item_price ."'> ";
+    echo '<br>';
+    echo "<br>Model Number* <br><input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
+    echo '<br>';
+    echo "<br>Quantity Available*   <br><input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
 
+    echo '<br>';
     echo "<br> Category* <select name='itemCategory'>  ";
         echo "  <option value='Equipment'> Equipment </option>"; 
         echo "  <option value='Clothing'> Clothing </option>";
         echo "  <option value='Unsorted'> Unsorted </option>";
     echo "</select>";
+    echo '<br>';
 
 
     
