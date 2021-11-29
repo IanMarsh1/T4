@@ -155,7 +155,7 @@
 	$r = mysqli_query ( $dbc , $q );
 	
 	if ( $r ) {
-		echo "<br><h3> The active field for supplier $id changed to $active <br> <a href= 'AF_ShowSuppliersTable.php' > Go Back </a></h3>";
+		echo "<br><h3> The supplier was deleted <br> <a href= 'AF_ShowSuppliersTable.php' > Go Back </a></h3>";
 	}else{
 		echo "<br>" . mysqli_error( $dbc ) . "</br>" ;
 	}
