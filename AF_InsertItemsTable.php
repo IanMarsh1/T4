@@ -247,7 +247,7 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
 
     
     echo "<br>Name* <input type = 'text' name = 'itemName' value = '" . $item_name ."'> ";
-    echo "<br>Price* <input type = 'number' name = 'itemPrice' value = '" . $item_price ."'> ";
+    echo "<br>Price* <input type = 'number' max = '99999.99' min = '0' step = '.01' name = 'itemPrice' value = '" . $item_price ."'> ";
     echo "<br>Model Number* <input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
     echo "<br>Quantity Available* <input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
 

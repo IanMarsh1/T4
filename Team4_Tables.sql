@@ -44,7 +44,7 @@ values ("LPecovic119", "Luke", "Pecovic", "admin004", current_timestamp(), "Admi
 create table if not exists T4_Items (
 	itemID int primary key unique auto_increment not null,
 	itemName varchar(32) unique not null default("N/A"),
-	itemPrice decimal not null default(0.00),
+	itemPrice decimal(6,2) not null default(0.00),
 	modelNum int unique,
 	quantityAvailable int default(0),
 	itemCategory enum('Clothing', 'Equipment', 'Unsorted') not null default('Unsorted'),
