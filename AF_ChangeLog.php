@@ -85,6 +85,17 @@
 
         <hr style="color:#053386;">
 
+        <!-- V1.3.0 -->
+        <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.3.0 - 12/6/2021 - TBA</strong></h3>
+
+        <ul style="font-size: 18px;">
+
+            <li>TBA</li>
+
+        </ul>
+
+        <br>
+
         <!-- V1.2.0 -->
         <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.2.0 - 11/21/2021 - Tables</strong></h3>
 

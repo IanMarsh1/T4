@@ -15,7 +15,7 @@ echo '<br><a href="AF_DisclaimerPage.php" style = "color: #dfe7d3;background-col
 echo '<br><a href="AF_Construction.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Privacy Statement</a>';
 echo '<br><a href="AF_Construction.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Rental/ Return Policy</a>';
 echo '<br><a href="AF_ChangeLog.php" style = "color: #dfe7d3;background-color: transparent;text-decoration: none;font-size: 18px;">Change Log</a>';
-echo "<small style='color:#dfe7d3';> Current Version 1.2.0 </small>";
+echo "<small style='color:#dfe7d3';> Current Version 1.3.0 </small>";
 echo '<br><small style="color:#dfe7d3";>This page © by ArcticFox, 2021 </small>';
 echo "<br><small style='color:#dfe7d3';>Designed and created by ".FILE_AUTHOR.".</small>";
 echo '</footer>';
