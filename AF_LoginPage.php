@@ -52,6 +52,10 @@
             text-decoration: underline;
             font-size: 18px;
         }
+		p{
+            font-size: 14px;
+            font-family: Arial;
+        }
     </style>
 </head>
 
@@ -119,12 +123,32 @@
 			}
 		}
 	}
+
+	
+
 	
 	
 	// Action Handler: All Validations Passed
 	if ($_SERVER['REQUEST_METHOD'] == "POST" & $error_message == "") {
+
+		$q = "SELECT acctType FROM t4_users WHERE username='$username' AND password='$password'";
+		$r = mysqli_query ( $dbc , $q );   
+		
+		if ($r){
+			while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
+				if ($row[0] == 'Admin') {
+					$_SESSION['login_status'] = "LOGGED IN";
+				}
+
+				elseif ($row[0] == 'Employee' || $row[0] == 'Shareholder'){
+					$_SESSION['login_status'] = "LOGGED IN";
+				}
+			}
+		}
+
 		echo "<br> User $username successfully logged in!";
-		$_SESSION['login_status'] = "LOGGED IN";
+
+
 	}
 	
 	// Session login if-statements
@@ -137,9 +161,10 @@
 	
 	if ($_SERVER['REQUEST_METHOD'] == 'GET' || $error_message != "") {	// Tests to see if it's the first time loading the page. If not, does not load
 		echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-		echo "<br> Enter your username <input type = 'text' name = 'username'>";		// Enter username and password here
-		echo "<br> Enter your password <input type = 'password' name = 'password'>";
-		echo "<br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page
+		echo "<p> Username <br><input type = 'text' name = 'username'>";		// Enter username and password here
+		echo "<br>";
+		echo "<br> Password <br><input type = 'password' name = 'password'>";
+		echo "<br><br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page
 		echo "</form>";
 		
 		echo "<p>" . $error_message . "</p>";	// Tells the user if there is an error with their input

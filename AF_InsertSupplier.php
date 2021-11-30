@@ -52,6 +52,10 @@
             text-decoration: underline;
             font-size: 18px;
         }
+		p{
+            font-size: 18px;
+            font-family: Arial;
+        }
     </style>
 </head>
 
@@ -165,15 +169,18 @@
 	echo $error_message;
 	
 	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	echo "<br> Enter name of the company* <input type = 'text' value = '" . $supplierName ."' name = 'supplierName'>";
-	echo "<br> Enter email of the company* <input type = 'email' value = '" . $supplierEmail ."' name = 'supplierEmail'>";
-	echo "<br> Enter the phone # of the company <input type='tel' value = '" . $supplierPhoneNumber ."' name='supplierPhoneNumber' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>";
+	echo "<p> Enter name of the company* <br><input type = 'text' value = '" . $supplierName ."' name = 'supplierName'>";
+	echo '<br>';
+	echo "<br> Enter email of the company* <br><input type = 'email' value = '" . $supplierEmail ."' name = 'supplierEmail'>";
+	echo '<br>';
+	echo "<br> Enter the phone # of the company <br><input type='tel' value = '" . $supplierPhoneNumber ."' name='supplierPhoneNumber' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>";
 	echo "<small> ex: 123-456-7890</small>";
-	echo "<br> Enter the address of the company <input type = 'text' value = '" . $address ."' name = 'address'>";
-	echo "<br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page
+	echo '<br>';
+	echo "<br> Enter the address of the company <br><input type = 'text' value = '" . $address ."' name = 'address'>";
+	echo "<br><br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page
 	echo "</form>";
 
-	echo "<br> <a href= 'AF_ShowSuppliersTable.php' > Go Back </a>";
+	echo "<br> <a href= 'AF_ShowSuppliersTable.php' > <--- Go Back </a>";
 
 ?>
 

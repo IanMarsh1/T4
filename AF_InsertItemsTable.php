@@ -273,7 +273,7 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
 
     echo "</form>";
     
-    echo "<br> <a href= 'AF_ShowItemsTable.php' Style = 'text-decoration: underline;'> Go Back </a>";
+    echo "<br> <a href= 'AF_ShowItemsTable.php' Style = 'text-decoration: underline;'> <--- Go Back </a>";
 
     ?>
     <br>
