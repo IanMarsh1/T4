@@ -208,10 +208,12 @@
     echo "</tr>";
     echo "</Table>";
 
-    echo "<p style = 'color: black; text-align: center;'> <a href= 'AF_InsertItemsTable.php'> Want to Add an Item? Click Here </a>";
-
-    
-    
+    if (isset($_SESSION['acct_type'])) {
+        $acct = $_SESSION['acct_type'];
+        if ($acct == 'Employee'){
+            echo "<p style = 'color: black; text-align: center;'> <a href= 'AF_InsertItemsTable.php'> Want to Add an Item? Click Here </a>";
+        }
+    }
     ?>
     <br>
 

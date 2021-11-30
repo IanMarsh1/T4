@@ -89,6 +89,7 @@
         <ul style="color:#dfe7d3;">
             <li><a href="AF_HTMLReferencePage.php">HTML/CSS Reference</a></li>
             <li><a href="AF_MYSQLReferencePage.php">MySQL Reference</a></li>
+            <li><a href="AF_ShowUserTable.php">Show Users Table</a></li>
             <li><a href="AF_ExplainUserTable.php">Explain User Table </a></li>
             <li><a href="AF_ExplainItemsTable.php">Explain Items Table</a></li>
             <li><a href="AF_ExplainSuppliersTable.php">Explain Suppliers Table </a></li>

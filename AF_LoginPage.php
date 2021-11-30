@@ -138,15 +138,17 @@
 			while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
 				if ($row[0] == 'Admin') {
 					$_SESSION['login_status'] = "LOGGED IN";
+					$_SESSION['acct_type'] = 'Admin';
 				}
 
 				elseif ($row[0] == 'Employee' || $row[0] == 'Shareholder'){
 					$_SESSION['login_status'] = "LOGGED IN";
+					$_SESSION['acct_type'] = 'Employee';
 				}
 			}
 		}
 
-		echo "<br> User $username successfully logged in!";
+		echo "<br> User $username successfully logged in as a " . $_SESSION['acct_type'] . "!";
 
 
 	}

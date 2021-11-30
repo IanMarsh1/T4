@@ -172,8 +172,13 @@
     echo "</tr>";
     echo "</Table>";
 	
+	if (isset($_SESSION['acct_type'])) {
+        $acct = $_SESSION['acct_type'];
+        if ($acct == 'Employee'){
+            echo "<p style = 'color: black; text-align: center;'> <a href= 'AF_InsertSupplier.php'> Want to Add a Company? Click Here </a>";
+        }
+    }
 	
-	echo "<p style = 'color: black; text-align: center;'> <a href= 'AF_InsertSupplier.php'> Want to Add a Company? Click Here </a>";
 	
     
     ?>
