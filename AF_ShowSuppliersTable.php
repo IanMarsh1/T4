@@ -152,7 +152,12 @@
     echo "<th>Supplier Name</th>";
     echo "<th>Email</th>";
     echo "<th>Phone #</th>";
-    echo "<th>Delete</th>";
+	if (isset($_SESSION['acct_type'])) {		// Only displays delete if employee is logged in
+		$acct = $_SESSION['acct_type'];
+		if ($acct == 'Employee'){
+			echo "<th>Delete</th>";
+		}
+	}
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
     if ($r) {
@@ -162,8 +167,14 @@
             echo "<td> " . $row[1] ."</td>";
             echo "<td> " . $row[2] ."</td>";
             echo "<td> " . $row[3] ."</td>";
-            echo "<td> <a href = 'http://localhost/T4/AF_SupplierDelete.php?id=$row[0]&active=N'> Delete </a></td>";
-            echo "</tr>"; 
+			
+			if (isset($_SESSION['acct_type'])) {		// Only displays delete if employee is logged in
+				$acct = $_SESSION['acct_type'];
+				if ($acct == 'Employee'){
+					echo "<td> <a href = 'http://localhost/T4/AF_SupplierDelete.php?id=$row[0]&active=N'> Delete </a></td>";
+				}
+			}
+			echo "</tr>"; 
         }
     }
     else { 
