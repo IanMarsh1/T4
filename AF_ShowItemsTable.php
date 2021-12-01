@@ -184,7 +184,13 @@
     echo "<th>Model Number</th>";
     echo "<th>Quantity Available</th>";
     echo "<th>Category</th>";
-    echo "<th>Delete</th>";
+    if (isset($_SESSION['acct_type'])) {
+        $acct = $_SESSION['acct_type'];
+        if ($acct == 'Employee'){
+            echo "<th>Delete</th>";
+        }
+    }
+    
         
 
 	// Echos out table content if the SELECT * FROM command ran, otherwise it gives an error
@@ -197,7 +203,13 @@
             echo "<td> " . $row[3] ."</td>";
             echo "<td> " . $row[4] ."</td>";
             echo "<td> " . $row[5] ."</td>";
-            echo "<td> <a href = 'http://localhost/T4/AF_ItemsDelete.php?id=$row[0]&active=N&name=$row[1]'> Delete </a></td>";
+            if (isset($_SESSION['acct_type'])) {
+                $acct = $_SESSION['acct_type'];
+                if ($acct == 'Employee'){
+                    echo "<td> <a href = 'http://localhost/T4/AF_ItemsDelete.php?id=$row[0]&active=N&name=$row[1]'> Delete </a></td>";
+                }
+            }
+            
                 
             echo "</tr>"; 
         }
