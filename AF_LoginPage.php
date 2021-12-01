@@ -163,7 +163,7 @@
 	
 	if ($_SERVER['REQUEST_METHOD'] == 'GET' || $error_message != "") {	// Tests to see if it's the first time loading the page. If not, does not load
 		echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-		echo "<p> Username <br><input type = 'text' name = 'username'>";		// Enter username and password here
+		echo "<p> Username <br><input type = 'text' name = 'username' autofocus='autofocus'>";		// Enter username and password here
 		echo "<br>";
 		echo "<br> Password <br><input type = 'password' name = 'password'>";
 		echo "<br><br> <input type = 'submit' style='color:white; background-color:coral' value = 'Submit'>"; // Button to submit and refresh the page

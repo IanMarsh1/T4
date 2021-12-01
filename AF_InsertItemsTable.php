@@ -250,7 +250,7 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     
-    echo "<p>Name* <br><input type = 'text' name = 'itemName' value = '" . $item_name ."'> ";
+    echo "<p>Name* <br><input type = 'text' name = 'itemName' value = '" . $item_name ."' autofocus='autofocus'> ";
     echo '<br>';
     echo "<br>Price* <br><input type = 'number' max = '99999.99' min = '0' step = '.01' name = 'itemPrice' value = '" . $item_price ."'> ";
     echo '<br>';

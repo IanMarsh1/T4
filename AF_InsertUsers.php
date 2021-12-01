@@ -246,7 +246,7 @@
     # ------ Display Form --------
     
 	    echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	    echo "<p> Enter Username* <br><input type = 'text' value = '" . $username ."' name = 'username'>";
+	    echo "<p> Enter Username* <br><input type = 'text' value = '" . $username ."' name = 'username' autofocus='autofocus'>";
         echo '<br>';
         echo "<br> Enter Your First Name* <br> <input type = 'text' value = '" .$fname."' name = 'fname'>";
         echo '<br>';

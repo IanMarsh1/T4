@@ -169,7 +169,7 @@
 	echo $error_message;
 	
 	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
-	echo "<p> Enter name of the company* <br><input type = 'text' value = '" . $supplierName ."' name = 'supplierName'>";
+	echo "<p> Enter name of the company* <br><input type = 'text' value = '" . $supplierName ."' name = 'supplierName' autofocus='autofocus'>";
 	echo '<br>';
 	echo "<br> Enter email of the company* <br><input type = 'email' value = '" . $supplierEmail ."' name = 'supplierEmail'>";
 	echo '<br>';
