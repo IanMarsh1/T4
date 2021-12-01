@@ -12,10 +12,11 @@ if (isset($_SESSION['login_status'])) {
     $login_status = $_SESSION['login_status'];
     $acct = $_SESSION['acct_type'];
 
-    if ($login_status == "LOGGED IN" && $acct == 'Admin' || $acct == 'Employee') {
+    if ($login_status == "LOGGED IN" && $acct == 'Admin') {
         include "AF_NavBarLoggedA.php";
-    } 
-    else {
+    }else if ($login_status == "LOGGED IN" && $acct == 'Employee'){
+		include "AF_NavBarLoggedE.php";
+	}else {
 
         echo '<table border = 1; 
         style= "width:100%;
