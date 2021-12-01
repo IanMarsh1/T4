@@ -22,8 +22,6 @@ margin-left: auto;"
 echo	'<col style="width:10%">';
 echo 	'<col style="width:10%">';
 echo	'<col style="width:10%">';
-echo	'<col style="width:14%">';
-echo	'<col style="width:14%">';
 echo	'<col style="width:20%">';
 	
 			//		<!-- Info on the website -->
