@@ -37,7 +37,10 @@ insert into T4_Users (username, fname, lname, password, lastPassChange, acctType
 values ("IMarsh254", "Ian", "Marsh", "admin003", current_timestamp(), "Admin", "Y", "2001-09-04");
 insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
 values ("LPecovic119", "Luke", "Pecovic", "admin004", current_timestamp(), "Admin", "Y", "2002-09-13");
-
+insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
+values ("BillNye", "Bill", "Nye", "BillNye001", current_timestamp(), "Employee", "Y", "1920-09-13");
+insert into T4_Users (username, fname, lname, password, lastPassChange, acctType, active, DOB) 
+values ("BobRoss", "Bob", "Ross", "BobRoss001", current_timestamp(), "Employee", "Y", "1896-09-13");
 
 
 -- Creates a table that will hold all necessary information for the products that we sell.
