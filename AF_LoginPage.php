@@ -111,8 +111,7 @@
 		
 		if ($error_message == "") {		// Checks if the username/password matches the one in the database
 			$q = "SELECT * FROM T4_Users WHERE username='$username' AND password='$password'";
-			$r = mysqli_query ( $dbc , $q ); 
-			echo $q;   
+			$r = mysqli_query ( $dbc , $q );  
 			
 			if ($r){
 				if (mysqli_num_rows($r) == 0) { 

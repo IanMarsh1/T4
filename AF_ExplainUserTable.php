@@ -153,7 +153,7 @@
     <!--- This is the footer file --->
     <?php
     define("FILE_AUTHOR","Ian Marsh");
-    INCLUDE ("../html/AF_Footer.php");
+    INCLUDE ("AF_Footer.php");
     ?>
     
 

@@ -154,7 +154,7 @@
     <?php
     include "../ErrorHandler.php";
     define("FILE_AUTHOR","Antonio Lopez");
-    INCLUDE ("../html/AF_Footer.php");
+    INCLUDE ("AF_Footer.php");
     ?>
     
 

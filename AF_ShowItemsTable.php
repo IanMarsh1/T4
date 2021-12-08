@@ -238,7 +238,7 @@
     <!--- This calls the footer file --->
     <?php
     define("FILE_AUTHOR","Luke Pecovic");
-    INCLUDE ("../html/AF_Footer.php");
+    INCLUDE ("AF_Footer.php");
     ?>
 
 

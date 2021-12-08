@@ -146,7 +146,7 @@
     <?php
         include "../ErrorHandler.php";
         define("FILE_AUTHOR", "Antonio Lopez, Luke Pecovic, and Ian Marsh");
-        include("../html/AF_Footer.php");
+        include("AF_Footer.php");
     ?>
 
 </body>
