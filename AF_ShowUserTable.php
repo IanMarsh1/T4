@@ -189,7 +189,7 @@
     <!--- This is the footer file --->
     <?php
     define("FILE_AUTHOR","Ian Marsh");
-    INCLUDE ("../T4/AF_Footer.php");
+    INCLUDE ("../AF_Footer.php");
     ?>
     
 

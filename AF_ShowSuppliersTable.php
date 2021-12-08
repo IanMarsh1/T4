@@ -110,8 +110,8 @@
     <hr>
         
     <?php
-    include "../ErrorHandler.php";
-    REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    include "../errorHandler.php";
+    REQUIRE ("../connect_db.php"); // Connects to our database (actual file found in parent folder)
 
 	if(isset($_POST['sort'])){
 		$sort_type = "ORDER BY " . $_POST['sort']  . " " . $_POST['direct'];
@@ -119,7 +119,7 @@
 		$sort_type = "";
 	}
 
-    $q = "SELECT * FROM t4_Suppliers WHERE active='Y' $sort_type"; // Calls to return the T4_Suppliers values from the table 
+    $q = "SELECT * FROM T4_Suppliers WHERE active='Y' $sort_type"; // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );   // Checks to see if the command worked or not
 
     // Form to process different sort options
