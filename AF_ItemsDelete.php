@@ -121,7 +121,7 @@
 
 <?php
 
-	require "../Connect_db.php";
+	require "../connect_db.php";
 	include "../ErrorHandler.php";
 
 	if (isset($_GET["id"])){
@@ -148,7 +148,7 @@
 		die;
 	}
 	
-	$q = "UPDATE t4_items SET active = '" . $active . "' WHERE itemID = $id";
+	$q = "UPDATE T4_Items SET active = '" . $active . "' WHERE itemID = $id";
 	
 	$r = mysqli_query ( $dbc , $q );
 	
@@ -169,7 +169,7 @@
     <!--- This calls the footer file --->
     <?php
     	define("FILE_AUTHOR","Ian Marsh");
-    	INCLUDE ("../T4/AF_Footer.php");
+    	INCLUDE ("AF_Footer.php");
     ?>
 
 

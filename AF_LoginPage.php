@@ -110,8 +110,8 @@
 		}
 		
 		if ($error_message == "") {		// Checks if the username/password matches the one in the database
-			$q = "SELECT * FROM t4_users WHERE username='$username' AND password='$password'";
-			$r = mysqli_query ( $dbc , $q );    
+			$q = "SELECT * FROM T4_Users WHERE username='$username' AND password='$password'";
+			$r = mysqli_query ( $dbc , $q );  
 			
 			if ($r){
 				if (mysqli_num_rows($r) == 0) { 
@@ -131,8 +131,10 @@
 	// Action Handler: All Validations Passed
 	if ($_SERVER['REQUEST_METHOD'] == "POST" & $error_message == "") {
 
-		$q = "SELECT acctType FROM t4_users WHERE username='$username' AND password='$password'";
+
+		$q = "SELECT acctType FROM T4_Users WHERE username='$username' AND password='$password'";
 		$r = mysqli_query ( $dbc , $q );   
+		
 		
 		if ($r){
 			while ($row = mysqli_fetch_array( $r, MYSQLI_NUM)){
@@ -191,7 +193,7 @@
     <!--- This calls the footer file --->
     <?php
     	define("FILE_AUTHOR","Ian Marsh");
-    	INCLUDE ("../T4/AF_Footer.php");
+    	INCLUDE ("../html/AF_Footer.php");
     ?>
 
 

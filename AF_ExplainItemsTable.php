@@ -109,7 +109,7 @@
     <hr>
 
     <?php
-    REQUIRE ("../Connect_db.php");
+    REQUIRE ("../connect_db.php");
 
     $q = "EXPLAIN T4_Items";       
     $r = mysqli_query ( $dbc , $q ); 
@@ -160,7 +160,7 @@
     <?php
     include "../ErrorHandler.php";
     define("FILE_AUTHOR","Luke Pecovic");
-    INCLUDE ("../T4/AF_Footer.php");
+    INCLUDE ("AF_Footer.php");
     ?>
 
 

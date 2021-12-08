@@ -122,7 +122,7 @@
     <hr>
 
     <?php
-    REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    REQUIRE ("../connect_db.php"); // Connects to our database (actual file found in parent folder)
 
     if(isset($_POST['sort'])){
         $sort_type = " " . $_POST['sort'];
@@ -206,7 +206,7 @@
             if (isset($_SESSION['acct_type'])) {
                 $acct = $_SESSION['acct_type'];
                 if ($acct == 'Employee'){
-                    echo "<td> <a href = 'http://localhost/T4/AF_ItemsDelete.php?id=$row[0]&active=N&name=$row[1]'> Delete </a></td>";
+                    echo "<td> <a href = 'AF_ItemsDelete.php?id=$row[0]&active=N&name=$row[1]'> Delete </a></td>";
                 }
             }
             
@@ -238,7 +238,7 @@
     <!--- This calls the footer file --->
     <?php
     define("FILE_AUTHOR","Luke Pecovic");
-    INCLUDE ("../T4/AF_Footer.php");
+    INCLUDE ("AF_Footer.php");
     ?>
 
 

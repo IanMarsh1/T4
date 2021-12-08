@@ -107,7 +107,7 @@
         <hr>
         
     <?php
-    REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    REQUIRE ("../connect_db.php"); // Connects to our database (actual file found in parent folder)
 
     $q = "EXPLAIN T4_Users"; 		   // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );       // Checks to see if the command worked or not
@@ -153,7 +153,7 @@
     <!--- This is the footer file --->
     <?php
     define("FILE_AUTHOR","Ian Marsh");
-    INCLUDE ("../T4/AF_Footer.php");
+    INCLUDE ("AF_Footer.php");
     ?>
     
 

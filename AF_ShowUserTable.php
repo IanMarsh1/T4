@@ -109,7 +109,7 @@
         
     <?php
     session_start();
-    REQUIRE ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    REQUIRE ("../connect_db.php"); // Connects to our database (actual file found in parent folder)
 
     if(isset($_POST['direct'])){
         $sort_type = " " . $_POST['direct'];
@@ -166,7 +166,7 @@
                 echo "<td> " . $row[1] ."</td>";
                 echo "<td> " . $row[2] ."</td>";
                 echo "<td> " . $row[3] ."</td>";
-                echo "<td> <a href = 'http://localhost/T4/AF_UserDelete.php?id=$row[0]&active=N'> Delete </a></td>";
+                echo "<td> <a href = 'AF_UserDelete.php?id=$row[0]&active=N'> Delete </a></td>";
             echo "</tr>"; 
         }
     }
@@ -189,7 +189,7 @@
     <!--- This is the footer file --->
     <?php
     define("FILE_AUTHOR","Ian Marsh");
-    INCLUDE ("../AF_Footer.php");
+    INCLUDE ("AF_Footer.php");
     ?>
     
 
