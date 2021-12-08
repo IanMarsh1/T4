@@ -129,7 +129,7 @@
 
     <?php
 
-	require "../Connect_db.php";
+	require "../connect_db.php";
 	include "../ErrorHandler.php";
 
 	if (isset($_GET["id"])){
@@ -149,7 +149,7 @@
 		die;
 	}
 	
-	$q = "UPDATE t4_suppliers SET active = '" . $active . "' WHERE supplierID = $id";
+	$q = "UPDATE T4_Suppliers SET active = '" . $active . "' WHERE supplierID = $id";
 	
 	
 	$r = mysqli_query ( $dbc , $q );
@@ -172,7 +172,7 @@
     <!--- This calls the footer file --->
     <?php
     	define("FILE_AUTHOR","Antonio Lopez");
-    	INCLUDE ("../T4/AF_Footer.php");
+    	INCLUDE ("../html/AF_Footer.php");
     ?>
 
 

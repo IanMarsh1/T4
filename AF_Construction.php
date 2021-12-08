@@ -80,7 +80,7 @@
     <?php
         include "../ErrorHandler.php";
         define("FILE_AUTHOR","Antonio Lopez, Luke Pecovic, and Ian Marsh");
-        INCLUDE ("../T4/AF_Footer.php");
+        INCLUDE ("../html/AF_Footer.php");
     ?>
 
 </body>

@@ -19,10 +19,10 @@ margin-right: auto;
 margin-left: auto;"
 >';
 	
-echo	'<col style="width:10%">';
-echo 	'<col style="width:10%">';
-echo	'<col style="width:10%">';
-echo	'<col style="width:20%">';
+echo	'<col style="width:25%">';
+echo 	'<col style="width:25%">';
+echo	'<col style="width:25%">';
+echo	'<col style="width:25%">';
 	
 			//		<!-- Info on the website -->
 echo		'<tr>';
