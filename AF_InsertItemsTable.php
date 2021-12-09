@@ -116,7 +116,7 @@
     <?php
     
     include ("../ErrorHandler.php");
-    Require ("../Connect_db.php"); // Connects to our database (actual file found in parent folder)
+    Require ("../connect_db.php"); // Connects to our database (actual file found in parent folder)
     $error_message = "";
     echo $error_message;
 
@@ -206,7 +206,7 @@
     #------ Check to see if item is already used -------
     
     if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
-        $q = "Select itemName From t4_items Where itemName = '$item_name'";
+        $q = "Select itemName From T4_Items Where itemName = '$item_name'";
         $r = mysqli_query ( $dbc , $q );    # this runs commands,
         if (mysqli_num_rows($r) > 0) { 
             $error_message = "Item Name is already used!";
@@ -215,7 +215,7 @@
     }
     #-------- Check to see if model num is already used-------
     if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
-        $q = "Select modelNum From t4_items Where modelNum = '$model_num'";
+        $q = "Select modelNum From T4_Items Where modelNum = '$model_num'";
         $r = mysqli_query ( $dbc , $q );    # this runs commands,
         if (mysqli_num_rows($r) > 0) { 
             $error_message = "Model Number is already used!";
@@ -224,7 +224,7 @@
     }
     
 if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") { 
-   $q = "INSERT INTO t4_items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
+   $q = "INSERT INTO T4_Items (itemName, itemPrice, modelNum, quantityAvailable, itemCategory) 
     VALUES ('$item_name', '$item_price', '$model_num', '$quantity_available', '$item_category')";       // Calls to return the T4_Suppliers values from the table 
     $r = mysqli_query ( $dbc , $q );     // Checks to see if the command worked or not
 

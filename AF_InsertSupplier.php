@@ -145,7 +145,7 @@
 		}
 		
 		if ($error_message == "") {		// Checks if supplier name/email matches one in the database
-			$q = "SELECT * FROM t4_suppliers WHERE supplierName='$supplierName'";
+			$q = "SELECT * FROM T4_Suppliers WHERE supplierName='$supplierName'";
 			$r = mysqli_query ( $dbc , $q );    
 			
 			
@@ -157,7 +157,7 @@
 		
 	}
 	if($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST"){
-		$q = "INSERT INTO t4_suppliers (supplierName, supplierEmail, supplierPhoneNumber, address) 
+		$q = "INSERT INTO T4_Suppliers (supplierName, supplierEmail, supplierPhoneNumber, address) 
 		VALUES ('$supplierName', '$supplierEmail', '$supplierPhoneNumber', '$address')";
 		$r = mysqli_query ( $dbc , $q );
 		
@@ -193,6 +193,7 @@
 		$this_string= str_replace("!", "",$this_string);
 		$this_string = str_replace("'", "",$this_string);
 		$this_string = str_replace("&", "",$this_string);
+		$this_string = str_replace(".", "",$this_string);
 
         
         if (ctype_alnum($this_string)){
