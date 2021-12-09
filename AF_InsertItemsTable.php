@@ -163,7 +163,7 @@
             $error_message = "Please enter a valid non blank name";
             
         }
-        elseif (ctype_alnum($item_name) == FALSE){
+        elseif (string_check($item_name) == FALSE){
             $error_message = "Item Name must be alphanumerics only!";
         }
         elseif (strlen($item_name) > 30) {
@@ -278,6 +278,22 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
     echo "</form>";
     
     echo "<br> <a href= 'AF_ShowItemsTable.php' Style = 'text-decoration: underline;'> <--- Go Back </a>";
+
+
+    function string_check($this_string){
+        $this_string = str_replace(" ", "",$this_string);
+		$this_string= str_replace("!", "",$this_string);
+		$this_string = str_replace("'", "",$this_string);
+		$this_string = str_replace("&", "",$this_string);
+
+        
+        if (ctype_alnum($this_string)){
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
+    }
 
     ?>
     <br>
