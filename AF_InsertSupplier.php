@@ -140,8 +140,8 @@
 		elseif(($supplierPhoneNumber) == ""){
 			$supplierPhoneNumber = "N/A";
 		}
-		elseif(($supplierPhoneNumber) == ""){
-			$address = "N/A";
+		elseif (string_check($address) == FALSE) {		
+			$error_message=" <p style='color:red';> Enter the correct address! </p>";
 		}
 		
 		if ($error_message == "") {		// Checks if supplier name/email matches one in the database
