@@ -86,11 +86,13 @@
         <hr style="color:#053386;">
 
         <!-- V1.3.0 -->
-        <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.3.0 - 12/6/2021 - TBA</strong></h3>
+        <h3 style="color:#dfe7d3;text-align: left;"><strong>Version 1.3.0 - 12/6/2021 - AWS</strong></h3>
 
         <ul style="font-size: 18px;">
 
-            <li>TBA</li>
+            <li>Made admin page visible only to administrators</li>
+            <li>Allow spaces in items & supplier names</li>
+            <li>Moved to AWS</li>
 
         </ul>
 
