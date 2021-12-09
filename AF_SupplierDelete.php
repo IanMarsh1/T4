@@ -139,6 +139,13 @@
 		echo "<br> No ID specified";
 		die;
 	}
+    if (isset($_GET["name"])){
+		$name = $_GET["name"];
+	}
+    else{
+		echo "<br> No name specified";
+		die;
+	}
 
 	
 	if (isset($_GET["active"])){
@@ -155,11 +162,11 @@
 	$r = mysqli_query ( $dbc , $q );
 	
 	if ( $r ) {
-		echo "<br><h3> The supplier was deleted <br> <a href= 'AF_ShowSuppliersTable.php' > Go Back </a></h3>";
+		echo "<h3> The supplier $name was deleted <br> <a href= 'AF_ShowSuppliersTable.php' > Go Back </a></h3>";
 	}else{
 		echo "<br>" . mysqli_error( $dbc ) . "</br>" ;
 	}
-	
+	 
 
 ?>
 

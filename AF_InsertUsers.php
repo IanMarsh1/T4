@@ -239,7 +239,7 @@
     }
     
     
-
+ 
     
     echo "<p style='color:red';>$error_message";
 
@@ -247,12 +247,16 @@
     
 	    echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
 	    echo "<p> Enter Username* <br><input type = 'text' value = '" . $username ."' name = 'username' autofocus='autofocus'>";
+        echo "<small> ex: Bob123</small>";
         echo '<br>';
         echo "<br> Enter Your First Name* <br> <input type = 'text' value = '" .$fname."' name = 'fname'>";
+        echo "<small> ex: Bob</small>";
         echo '<br>';
         echo "<br> Enter Your Last Name* <br><input type = 'text' value = '" . $lname."' name = 'lname'>";	
+        echo "<small> ex: Smith</small>";
         echo '<br>';
         echo "<br> Enter password*<br> <input type = 'password' name = 'password'>";
+        echo "<small> Must be 8 characters long and no spaces!</small>";
         echo '<br>';
         echo "<br> Enter password Again* <br><input type = 'password' name = 'passwordCheck'>";
         echo '<br>';

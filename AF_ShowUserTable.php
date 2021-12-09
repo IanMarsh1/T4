@@ -166,7 +166,7 @@
                 echo "<td> " . $row[1] ."</td>";
                 echo "<td> " . $row[2] ."</td>";
                 echo "<td> " . $row[3] ."</td>";
-                echo "<td> <a href = 'AF_UserDelete.php?id=$row[0]&active=N'> Delete </a></td>";
+                echo "<td> <a href = 'AF_UserDelete.php?id=$row[0]&active=N&name=$row[1]'> Delete </a></td>";
             echo "</tr>"; 
         }
     }
@@ -178,7 +178,7 @@
     echo "<p style = 'color: black; text-align: center;'><a href = 'AF_InsertUsers.php'> Want to Add a New User? Click Here! </a>"
     
     ?>
-    <br>
+    <br> 
 
     <hr>
 	<!-- Logo that we are using for this website -->

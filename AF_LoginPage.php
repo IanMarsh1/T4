@@ -110,16 +110,16 @@
 		}
 		
 		if ($error_message == "") {		// Checks if the username/password matches the one in the database
-			$q = "SELECT * FROM T4_Users WHERE username='$username' AND password='$password'";
+			$q = "SELECT * FROM T4_Users WHERE username='$username' AND password='$password' AND active = 'Y'";
 			$r = mysqli_query ( $dbc , $q );  
 			
 			if ($r){
 				if (mysqli_num_rows($r) == 0) { 
-					$error_message = "<p style='color:red';> Invalid user name/password combination. </p>";
+					$error_message = "<p style='color:red';> Invalid user name/password combination. </p><small>Note: Acct must be active</small>";
 				}
 			}
 			else {
-				$error_message = "<p style='color:red';>Invalid user name/password combination.</p>";
+				$error_message = "<p style='color:red';>Invalid user name/password combination.</p><br><small>Note: Acct must be active</small>";
 			}
 		}
 	}

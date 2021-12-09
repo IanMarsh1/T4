@@ -138,7 +138,7 @@
 		echo "<br> No name specified";
 		die;
 	}
-
+ 
 	
 	if (isset($_GET["active"])){
 		$active = $_GET["active"];

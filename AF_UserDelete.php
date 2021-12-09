@@ -129,6 +129,13 @@
 		echo "<br> No ID specified";
 		die;
 	}
+    if (isset($_GET["name"])){
+		$name = $_GET["name"];
+	}
+    else{
+		echo "<br> No name specified";
+		die;
+	}
 
 	
 	if (isset($_GET["active"])){
@@ -145,7 +152,7 @@
 	$r = mysqli_query ( $dbc , $q );
 	
 	if ( $r ) {
-		echo "<h3> The active field for user $id changed to $active <br> <a href= 'AF_ShowUserTable.php'> Go Back </a> </H3>";
+		echo "<h3> The user $name was deleted<br> <a href= 'AF_ShowUserTable.php'> Go Back </a> </H3>";
 	}else{
 		echo "<br>" . mysqli_error( $dbc ) . "</br>" ;
 	}
@@ -165,7 +172,7 @@
     ?>
 
 
-
+ 
 
 </body>
 

@@ -251,12 +251,16 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
 
     
     echo "<p>Name* <br><input type = 'text' name = 'itemName' value = '" . $item_name ."' autofocus='autofocus'> ";
+    echo "<small> ex: Boots</small>";
     echo '<br>';
     echo "<br>Price* <br><input type = 'number' max = '99999.99' min = '0' step = '.01' name = 'itemPrice' value = '" . $item_price ."'> ";
+    echo "<small> ex: 12.99</small>";
     echo '<br>';
     echo "<br>Model Number* <br><input type = 'number' name = 'modelNum' value = '" . $model_num ."'> ";
+    echo "<small> ex: 142531</small>";
     echo '<br>';
     echo "<br>Quantity Available*   <br><input type = 'number' name = 'quantityAvailable' value = '" . $quantity_available ."'> ";
+    echo "<small> ex: 42</small>";
 
     echo '<br>';
     echo "<br> Category* <select name='itemCategory'>  ";
@@ -282,7 +286,7 @@ if ($error_message == "" && $_SERVER['REQUEST_METHOD'] == "POST") {
 	<!-- Logo that we are using for this website -->
     <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
 
-    </main>
+    </main> 
 
     <!--- This calls the footer file --->
     <?php

@@ -117,15 +117,17 @@
 
 	// Input Validation Blocks of Code											
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
 		if ( trim($supplierName) == "") {		
 			$error_message=" <p style='color:red';> Enter the supplier name! </p>";
 		}
 		elseif(strlen($supplierName) >= 30){
 			$error_message=" <p style='color:red';> Supplier Name has max of 30 characters! </p>";
 		}
-		elseif ( ctype_alnum($supplierName) == FALSE ) {
+		elseif (string_check($supplierName) == FALSE) {
 			$error_message=" <p style='color:red';>Supplier Name must be alphnumeric only!</p>";
 		}
+		
 		elseif ( trim($supplierEmail) == "") {
 			$error_message=" <p style='color:red';> Enter the supplier email! </p>";
 		}
@@ -170,8 +172,10 @@
 	
 	echo "<form action = '" . $_SERVER['SCRIPT_NAME'] ."' method = 'POST'>";
 	echo "<p> Enter name of the company* <br><input type = 'text' value = '" . $supplierName ."' name = 'supplierName' autofocus='autofocus'>";
+	echo "<small> ex: Arctic Fox</small>";
 	echo '<br>';
 	echo "<br> Enter email of the company* <br><input type = 'email' value = '" . $supplierEmail ."' name = 'supplierEmail'>";
+	echo "<small> ex: Test@Test.com</small>";
 	echo '<br>';
 	echo "<br> Enter the phone # of the company <br><input type='tel' value = '" . $supplierPhoneNumber ."' name='supplierPhoneNumber' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>";
 	echo "<small> ex: 123-456-7890</small>";
@@ -181,6 +185,23 @@
 	echo "</form>";
 
 	echo "<br> <a href= 'AF_ShowSuppliersTable.php' > <--- Go Back </a>";
+
+
+
+	function string_check($this_string){
+        $this_string = str_replace(" ", "",$this_string);
+		$this_string= str_replace("!", "",$this_string);
+		$this_string = str_replace("'", "",$this_string);
+		$this_string = str_replace("&", "",$this_string);
+
+        
+        if (ctype_alnum($this_string)){
+            return TRUE;
+        }
+        else {
+            return FALSE;
+        }
+    }
 
 ?>
 
@@ -197,4 +218,4 @@
 
 </body>
 
-</html>
+</html> 

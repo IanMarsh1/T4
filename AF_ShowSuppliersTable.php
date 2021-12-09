@@ -171,7 +171,7 @@
 			if (isset($_SESSION['acct_type'])) {		// Only displays delete if employee is logged in
 				$acct = $_SESSION['acct_type'];
 				if ($acct == 'Employee'){
-					echo "<td> <a href = 'AF_SupplierDelete.php?id=$row[0]&active=N'> Delete </a></td>";
+					echo "<td> <a href = 'AF_SupplierDelete.php?id=$row[0]&active=N&name=$row[1]'> Delete </a></td>";
 				}
 			}
 			echo "</tr>"; 
@@ -199,7 +199,7 @@
 	<!-- Logo that we are using for this website -->
     <img src="https://static.vecteezy.com/system/resources/previews/001/194/632/original/snowboarding-png.png" width="320" height="320"></a>
     
-    </main>
+    </main> 
 
     <!--- This calls the footer file --->
     <?php
